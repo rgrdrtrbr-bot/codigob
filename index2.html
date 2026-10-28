@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código B | Calçados, Confecções e Artigos Esportivos - Santiago/RS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFE500',
+                            dark: '#121214',
+                            gray: '#1E1E24',
+                            light: '#F8F9FA',
+                            accent: '#FF3B30',
+                            pink: '#E11D48'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(255, 229, 0, 0.15), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(225, 29, 72, 0.08), transparent 50%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #FFE500;
+            border-radius: 10px;
+        }
+        .pulse-btn {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 font-sans antialiased selection:bg-brand-yellow selection:text-black">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-dark text-white text-xs py-2 px-4 border-b border-yellow-500/30">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-center sm:text-left">
+            <div class="flex items-center gap-2 mx-auto sm:mx-0">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="font-medium text-slate-200">Loja Aberta em Santiago/RS</span>
+                <span class="hidden md:inline text-slate-400">| Av. Getúlio Vargas, 1894 - Centro</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-4 text-slate-300">
+                <a href="tel:5532518371" class="hover:text-brand-yellow transition"><i class="fa-solid fa-phone text-xs mr-1 text-brand-yellow"></i> (55) 3251-8371</a>
+                <span>•</span>
+                <div class="flex gap-3 text-sm">
+                    <a href="https://www.instagram.com/lojacodigob/" target="_blank" rel="noopener" class="hover:text-brand-yellow transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/lojacodigob/?locale=pt_BR" target="_blank" rel="noopener" class="hover:text-brand-yellow transition"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- BRAND LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="h-12 w-auto overflow-hidden rounded-lg bg-black p-1 shadow-md border border-slate-800 transition transform group-hover:scale-105">
+                        <img src="codigo1.jpg" alt="Código B Logo" class="h-full w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x60/000000/FFE500?text=CODIGO+B'">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-amber-600 transition">CÓDIGO B</span>
+                        <span class="text-[10px] tracking-widest text-slate-500 font-semibold uppercase">Calçados & Esportes</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#hero" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">Início</a>
+                    <a href="#sobre" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">A Código B</a>
+                    <a href="#servicos" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">Categorias & Produtos</a>
+                    <a href="#diferenciais" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">Diferenciais</a>
+                    <a href="#depoimentos" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">Avaliações</a>
+                    <a href="#localizacao" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">Localização</a>
+                </nav>
+
+                <!-- QUICK CONTACT ACTIONS -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/555532518371?text=Olá!%20Vim%20pelo%20site%20da%20Código%20B%20e%20gostaria%20de%20atendimento." 
+                       target="_blank" 
+                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Loja</span>
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE NAV DROPDOWN -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 font-medium text-slate-700 hover:text-amber-600 border-b border-slate-100">Início</a>
+            <a href="#sobre" class="block py-2 font-medium text-slate-700 hover:text-amber-600 border-b border-slate-100">A Código B</a>
+            <a href="#servicos" class="block py-2 font-medium text-slate-700 hover:text-amber-600 border-b border-slate-100">Categorias & Produtos</a>
+            <a href="#diferenciais" class="block py-2 font-medium text-slate-700 hover:text-amber-600 border-b border-slate-100">Diferenciais</a>
+            <a href="#depoimentos" class="block py-2 font-medium text-slate-700 hover:text-amber-600 border-b border-slate-100">Avaliações</a>
+            <a href="#localizacao" class="block py-2 font-medium text-slate-700 hover:text-amber-600 border-b border-slate-100">Localização</a>
+            <div class="pt-2">
+                <a href="https://wa.me/555532518371?text=Olá!%20Vim%20pelo%20site%20da%20Código%20B%20e%20gostaria%20de%20atendimento." 
+                   target="_blank" 
+                   class="flex items-center justify-center gap-2 bg-emerald-600 text-white font-bold py-3 rounded-xl w-full shadow text-center">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    Falar pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO & DYNAMIC CAROUSEL BANNER -->
+    <!-- Nome da Seção: Hero Banner Interativo -->
+    <!-- Objetivo: Impactar visualmente o visitante, destacar os lançamentos e direcionar diretamente para o WhatsApp ou catálogo -->
+    <section id="hero" class="relative overflow-hidden bg-slate-900 text-white hero-gradient py-12 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- HERO CONTENT LEFT -->
+                <div class="lg:col-span-5 z-10 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-brand-yellow text-xs font-semibold tracking-wider uppercase backdrop-blur-md">
+                        <i class="fa-solid fa-fire text-amber-400"></i> Santiago / RS • Nova Coleção
+                    </div>
+
+                    <h1 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl leading-tight text-white">
+                        Estilo, Conforto e Performance <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">em um Só Lugar.</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Sua referência em calçados femininos, moda fitness, chuteiras e mantas esportivas em Santiago. Escolha o seu visual perfeito com o melhor atendimento da região.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/555532518371?text=Olá!%20Quero%20conhecer%20os%20lançamentos%20da%20Código%20B!" 
+                           target="_blank" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-yellow hover:bg-yellow-400 text-black font-extrabold px-7 py-4 rounded-2xl shadow-xl hover:shadow-yellow-500/20 transition transform hover:-translate-y-1">
+                            <i class="fa-brands fa-whatsapp text-xl text-slate-900"></i>
+                            <span>Atendimento Imediato</span>
+                        </a>
+
+                        <a href="#servicos" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-4 rounded-2xl border border-white/20 transition backdrop-blur-md">
+                            <span>Explorar Destaques</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- PROOF MINI BADGES -->
+                    <div class="pt-6 border-t border-slate-800 grid grid-cols-3 gap-2 text-center lg:text-left">
+                        <div>
+                            <div class="font-bold text-xl text-brand-yellow">+4.300</div>
+                            <div class="text-xs text-slate-400">Clientes no Google</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-xl text-white">4.8 ★</div>
+                            <div class="text-xs text-slate-400">Avaliação Média</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-xl text-brand-yellow">100%</div>
+                            <div class="text-xs text-slate-400">Marcas Originais</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO CAROUSEL RIGHT -->
+                <div class="lg:col-span-7 relative">
+                    <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-950 aspect-[4/3] sm:aspect-[16/10]">
+                        
+                        <!-- CAROUSEL TRACK -->
+                        <div id="carousel-track" class="flex h-full transition-transform duration-700 ease-out">
+                            
+                            <!-- SLIDE 1: CALÇADOS FEMININOS BOTTERO -->
+                            <div class="min-w-full h-full relative group">
+                                <img src="codigo10.jpg" alt="Sandália Bottero Conforto" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='codigo8.jpg'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+                                    <span class="inline-block bg-yellow-400 text-black font-bold text-xs uppercase px-3 py-1 rounded-md w-max mb-2">Linha Conforto Bottero</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-white">Elegância e Salto Bloco para Seu Dia a Dia</h3>
+                                    <p class="text-slate-300 text-sm mt-1 mb-4">"Quero parecer elegante e ficar confortável" - Sandálias de couro legítimo com caimento impecável.</p>
+                                    <a href="#calcados-femininos" class="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm hover:underline">
+                                        Ver Calçados Femininos <i class="fa-solid fa-chevron-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 2: MODA FITNESS RUN MORE -->
+                            <div class="min-w-full h-full relative group">
+                                <img src="codigo2.jpg" alt="Moda Fitness Run More" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='codigo3.jpg'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+                                    <span class="inline-block bg-rose-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-md w-max mb-2">Moda Fitness Exclusiva</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-white">Conjuntos Run More & Treino de Alta Performance</h3>
+                                    <p class="text-slate-300 text-sm mt-1 mb-4">Tecidos tecnológicos, compressão suave e cores vibrantes para elevar seus treinos em Santiago.</p>
+                                    <a href="#moda-fitness" class="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm hover:underline">
+                                        Ver Coleção Fitness <i class="fa-solid fa-chevron-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 3: FUTEBOL & CHUTEIRAS NIKE -->
+                            <div class="min-w-full h-full relative group">
+                                <img src="codigo7.jpg" alt="Chuteira Nike Tiempo Futebol" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/800x500/121212/FFE500?text=Chuteiras+e+Esportes'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+                                    <span class="inline-block bg-blue-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-md w-max mb-2">Artigos Esportivos</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-white">Chuteiras Profissionais & Camisas Oficiais</h3>
+                                    <p class="text-slate-300 text-sm mt-1 mb-4">Mantas do Grêmio, Inter, Nike Tiempo e bolas oficiais para dar o seu melhor em campo.</p>
+                                    <a href="#artigos-esportivos" class="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm hover:underline">
+                                        Ver Linha Esportiva <i class="fa-solid fa-chevron-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 4: SAPATILHAS E SAPATOS DE COURO -->
+                            <div class="min-w-full h-full relative group">
+                                <img src="codigo9.jpg" alt="Sapatilha Couro Bottero" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='codigo8.jpg'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 sm:p-8">
+                                    <span class="inline-block bg-amber-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-md w-max mb-2">Primavera / Verão</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold text-white">Sapatilhas Fresquinhas e Arrumadas</h3>
+                                    <p class="text-slate-300 text-sm mt-1 mb-4">Acabamento tramado em couro legítimo para leveza nos dias quentes.</p>
+                                    <a href="#calcados-femininos" class="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm hover:underline">
+                                        Garantir o Seu Tamanho <i class="fa-solid fa-chevron-right text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CAROUSEL CONTROLS -->
+                        <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 flex items-center justify-center transition" aria-label="Anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 flex items-center justify-center transition" aria-label="Próximo">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                        <!-- CAROUSEL INDICATORS -->
+                        <div class="absolute bottom-3 right-6 flex gap-2 z-20" id="carousel-dots">
+                            <button class="w-3 h-3 rounded-full bg-brand-yellow transition" data-index="0"></button>
+                            <button class="w-3 h-3 rounded-full bg-white/40 transition" data-index="1"></button>
+                            <button class="w-3 h-3 rounded-full bg-white/40 transition" data-index="2"></button>
+                            <button class="w-3 h-3 rounded-full bg-white/40 transition" data-index="3"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: SOBRE A CÓDIGO B -->
+    <!-- Nome da Seção: Sobre Nós -->
+    <!-- Objetivo: Construir autoridade e conexão emocional com a comunidade de Santiago - RS -->
+    <!-- CTA: Chamar no WhatsApp / Conhecer a Loja -->
+    <section id="sobre" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- IMAGE COLLAGE LEFT -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden shadow-lg aspect-square border border-slate-100">
+                            <img src="codigo8.jpg" alt="Sapatos de Couro Femininos" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="bg-amber-100 p-6 rounded-2xl border border-amber-200">
+                            <span class="text-3xl font-black text-amber-700 block font-display">Santiago/RS</span>
+                            <p class="text-xs font-semibold text-amber-900 mt-1">Av. Getúlio Vargas, 1894 • Centro</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-xl">
+                            <i class="fa-solid fa-shield-heart text-2xl text-brand-yellow mb-2 block"></i>
+                            <h4 class="font-bold text-lg">Atendimento Humanizado</h4>
+                            <p class="text-xs text-slate-300 mt-1">Nossa equipe é reconhecida pela dedicação e atenção total a cada cliente.</p>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg aspect-square border border-slate-100">
+                            <img src="codigo5.jpg" alt="Fitness e Vestuário Código B" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT RIGHT -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-900 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-store"></i> Tradição & Modernidade
+                    </div>
+
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 leading-tight">
+                        A Loja de Calçados e Artigos Esportivos Querida de Santiago
+                    </h2>
+
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        A <strong>Código B</strong> nasce do desejo de oferecer a Santiago e região o que há de mais moderno em moda casual, calçados femininos de alto conforto e produtos esportivos de alta performance. 
+                    </p>
+
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Reunimos as melhores marcas do mercado como <strong>Bottero, Run More, Nike, Umbro, Adidas</strong> e mantas oficiais dos principais clubes do Rio Grande do Sul. Aqui você encontra um ambiente jovem, aconchegante e atencioso, pensado para que você se sinta em casa.
+                    </p>
+
+                    <!-- KEY METRICS / HIGHLIGHTS -->
+                    <div class="grid grid-cols-2 gap-4 py-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-100 text-yellow-800 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Calçados Selecionados</h4>
+                                <p class="text-xs text-slate-500">Do salto elegante à sapatilha leve</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-100 text-yellow-800 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-shirt text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Moda Fitness & Treino</h4>
+                                <p class="text-xs text-slate-500">Tecnologia, sustentação e estilo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA BUTTON -->
+                    <div class="pt-2">
+                        <a href="https://wa.me/555532518371?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20loja%20Código%20B!" 
+                           target="_blank" 
+                           class="inline-flex items-center gap-3 bg-slate-900 hover:bg-black text-white font-bold px-7 py-3.5 rounded-2xl shadow-lg transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                            <span>Falar Conosco no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVIÇOS & CATEGORIAS DIVERSIFICADAS -->
+    <!-- Nome da Seção: Serviços e Categorias de Produtos -->
+    <!-- Objetivo: Apresentar de forma interativa todas as soluções oferecidas pela Código B -->
+    <!-- CTA: Consultar Tamanho / Comprar pelo WhatsApp -->
+    <section id="servicos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-900 text-xs font-bold uppercase tracking-wider">
+                    Nossas Coleções & Serviços
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    Tudo para Seu Estilo de Vida Ativo e Elegante
+                </h2>
+                <p class="text-slate-600">
+                    Navegue por nossas principais categorias. Clique em qualquer item para tirar dúvidas sobre numeração e estoque diretamente no WhatsApp com nossos consultores.
+                </p>
+            </div>
+
+            <!-- CATEGORY CARDS GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CATEGORY 1: CALÇADOS FEMININOS & CONFORTO -->
+                <div id="calcados-femininos" class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden bg-slate-100">
+                        <img src="codigo10.jpg" alt="Sandália Salto Bloco Bottero" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='codigo8.jpg'">
+                        <span class="absolute top-4 left-4 bg-black/80 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md">
+                            Bottero & Couro
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-display font-bold text-xl text-slate-900">Calçados Femininos Conforto</h3>
+                            <p class="text-slate-600 text-sm mt-2">
+                                Sandálias salto bloco, sapatilhas tramadas respiráveis e slingbacks para você parecer elegante sem abrir mão do bem-estar.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-500">Tamanhos 33 ao 39</span>
+                            <a href="https://wa.me/555532518371?text=Olá!%20Tenho%20interesse%20em%20Calçados%20Femininos%20da%20Bottero." 
+                               target="_blank" 
+                               class="inline-flex items-center gap-1 text-sm font-bold text-slate-900 hover:text-amber-600 transition">
+                                Consultar Estoque <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: MODA FITNESS & ACTIVEWEAR -->
+                <div id="moda-fitness" class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden bg-slate-100">
+                        <img src="codigo2.jpg" alt="Conjunto Moda Fitness Run More" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='codigo3.jpg'">
+                        <span class="absolute top-4 left-4 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Run More
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-display font-bold text-xl text-slate-900">Moda Fitness & Vestuário</h3>
+                            <p class="text-slate-600 text-sm mt-2">
+                                Leggings, shorts de alta compressão, tops croppeds anatômicos e coletes esportivos para treinar com charme e mobilidade.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-500">Coleção Nova</span>
+                            <a href="https://wa.me/555532518371?text=Olá!%20Quero%20ver%20as%20opções%20de%20Moda%20Fitness%20Run%20More." 
+                               target="_blank" 
+                               class="inline-flex items-center gap-1 text-sm font-bold text-slate-900 hover:text-amber-600 transition">
+                                Ver Modelos <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: ARTIGOS ESPORTIVOS & FUTEBOL -->
+                <div id="artigos-esportivos" class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
+                    <div class="relative h-64 overflow-hidden bg-slate-100">
+                        <img src="codigo7.jpg" alt="Chuteiras Nike e Futebol" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121212/FFE500?text=Artigos+Esportivos'">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Futebol & Campo
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-display font-bold text-xl text-slate-900">Artigos Esportivos & Chuteiras</h3>
+                            <p class="text-slate-600 text-sm mt-2">
+                                Chuteiras society, futsal e campo das principais marcas (Nike Tiempo, Adidas), além de meias, caneladeiras e bolas.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-500">Marcas Oficiais</span>
+                            <a href="https://wa.me/555532518371?text=Olá!%20Procuro%20chuteiras%20e%20artigos%20de%20futebol." 
+                               target="_blank" 
+                               class="inline-flex items-center gap-1 text-sm font-bold text-slate-900 hover:text-amber-600 transition">
+                                Peça Sua Numeração <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FEATURED PRODUCTS MINI-CATALOG -->
+                <div class="md:col-span-2 lg:col-span-3 bg-slate-900 text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                        <div class="space-y-3 text-center lg:text-left">
+                            <span class="text-brand-yellow font-bold text-xs uppercase tracking-widest"><i class="fa-solid fa-shirt mr-1"></i> Camisas Oficiais de Futebol</span>
+                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl">Vista a Paixão do Seu Time em Santiago</h3>
+                            <p class="text-slate-300 text-sm max-w-xl">
+                                Trabalhamos com Mantas Oficiais licenciadas. Exemplo: Camisa Umbro Grêmio Oficial por R$ 329,90 e Camisa Adidas Inter Oficial por R$ 259,90.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/555532518371?text=Olá!%20Quero%20consultar%20as%20camisas%20oficiais%20de%20futebol%20disponíveis." 
+                           target="_blank" 
+                           class="shrink-0 bg-brand-yellow hover:bg-yellow-400 text-slate-900 font-extrabold px-8 py-4 rounded-2xl shadow-xl transition transform hover:scale-105">
+                            <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Reservar Camisa Oficial
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: DIFERENCIAIS CÓDIGO B -->
+    <!-- Nome da Seção: Diferenciais competitivos -->
+    <!-- Objetivo: Sanar dúvidas frequentes e destacar porque a Código B é referência em Santiago -->
+    <!-- CTA: Experimente Nosso Atendimento -->
+    <section id="diferenciais" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-900 text-xs font-bold uppercase tracking-wider">
+                    Por Que Escolher a Código B?
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    O Padrão de Qualidade que Você Merece
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Trabalhamos para encantar cada cliente de Santiago com curadoria rigorosa, atendimento atencioso e garantia de satisfação.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- CARD 1 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-yellow-300 hover:bg-yellow-50/30 transition duration-300 space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-yellow text-slate-900 flex items-center justify-center font-bold text-2xl shadow-md">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">100% Produtos Originais</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Parcerias diretas com os maiores fabricantes como Bottero, Run More, Nike, Adidas e Umbro.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-yellow-300 hover:bg-yellow-50/30 transition duration-300 space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-yellow text-slate-900 flex items-center justify-center font-bold text-2xl shadow-md">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Atendimento Personalizado</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Equipe dedicada, atenciosa e proativa ("show de bola!") para ajudar você a encontrar o calçado ideal.
+                    </p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-yellow-300 hover:bg-yellow-50/30 transition duration-300 space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-yellow text-slate-900 flex items-center justify-center font-bold text-2xl shadow-md">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Embalagem com Zelo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Seu produto é preparado com extremo carinho, pronto para presentear quem você ama com cartões personalizados.
+                    </p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-yellow-300 hover:bg-yellow-50/30 transition duration-300 space-y-4">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-yellow text-slate-900 flex items-center justify-center font-bold text-2xl shadow-md">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Troca Facilitada</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Transparência total e suporte rápido presencialmente na loja do Centro de Santiago.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: DEPOIMENTOS DE CLIENTES DO GOOGLE -->
+    <!-- Nome da Seção: Depoimentos e Prova Social -->
+    <!-- Objetivo: Passar confiança total através de depoimentos reais e notas do Google -->
+    <!-- CTA: Ver todas as avaliações / Fazer um pedido -->
+    <section id="depoimentos" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-yellow text-xs font-bold uppercase">
+                        <i class="fa-brands fa-google"></i> Avaliações Reais no Google
+                    </div>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl">
+                        O Que Dizem Nossos Clientes
+                    </h2>
+                    <p class="text-slate-400 text-sm max-w-xl">
+                        Mais de <strong>4.346 avaliações</strong> com nota média excelente. Transparência e carinho em cada interação.
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 flex items-center gap-4 shrink-0">
+                    <div class="text-center">
+                        <span class="text-3xl font-black text-brand-yellow font-display">4.8</span>
+                        <div class="text-amber-400 text-xs">★★★★★</div>
+                    </div>
+                    <div class="text-xs text-slate-300 border-l border-white/20 pl-4">
+                        <p class="font-bold text-white">Excelente</p>
+                        <p>Baseado em 4.300+ opiniões</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TESTIMONIAL CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- TESTIMONIAL 1 -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm">★★★★★</div>
+                        <p class="text-slate-200 text-base italic">
+                            "Produto chegou embalado com extremo zelo e um cartão de mensagem carinhoso! Amei o cuidado da Código B."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/50 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Cliente Verificado</h4>
+                            <p class="text-xs text-slate-400">Avaliação Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 2 -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm">★★★★★</div>
+                        <p class="text-slate-200 text-base italic">
+                            "As funcionárias (os) são show de bola, super atenciosas, proativas e dedicadas! Encontrei exatamente o calçado que procurava."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/50 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 text-white font-bold flex items-center justify-center">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Cliente Local em Santiago</h4>
+                            <p class="text-xs text-slate-400">Avaliação Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 3 -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-8 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm">★★★★★</div>
+                        <p class="text-slate-200 text-base italic">
+                            "Melhor loja de artigos esportivos e calçados da cidade. Sempre com lançamentos atualizados da Nike, Bottero e Run More."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/50 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-500 text-white font-bold flex items-center justify-center">
+                            C
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Comprador Frequente</h4>
+                            <p class="text-xs text-slate-400">Santiago - RS</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: LOCALIZAÇÃO, HORÁRIOS E CONTATO -->
+    <!-- Nome da Seção: Localização e Contato -->
+    <!-- Objetivo: Facilitar o acesso presencial e via Google Maps da loja em Santiago - RS -->
+    <!-- CTA: Abrir no Google Maps / Ligar na Loja -->
+    <section id="localizacao" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- DETAILS LEFT -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-900 text-xs font-bold uppercase tracking-wider">
+                        Venha nos Visitar
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                        Código B em Santiago - RS
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Estamos localizados no coração de Santiago, com acesso fácil, ambiente climatizado e atendimento caloroso.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        
+                        <!-- ADDRESS -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 text-brand-yellow flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Endereço Completo</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Av. Getúlio Vargas, 1894 - Centro, Santiago - RS, 97700-365</p>
+                            </div>
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 text-brand-yellow flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Telefone / Atendimento</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">(55) 3251-8371</p>
+                            </div>
+                        </div>
+
+                        <!-- HOURS -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 text-brand-yellow flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Horário de Funcionamento</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Segunda a Sábado: 08:30 às 12:00 | 14:00 às 18:30</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- MAP BUTTON -->
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                        <a href="https://maps.google.com/?q=Av.+Getúlio+Vargas,+1894+-+Centro,+Santiago+-+RS" 
+                           target="_blank" 
+                           class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-black text-white font-bold px-6 py-3.5 rounded-2xl shadow transition">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Abrir Rotas no Maps</span>
+                        </a>
+
+                        <a href="https://wa.me/555532518371?text=Olá!%20Gostaria%20de%20confirmar%20se%20a%20loja%20está%20aberta%20agora." 
+                           target="_blank" 
+                           class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-2xl shadow transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Falar no WhatsApp</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- MAP / INSTAGRAM EMBED PREVIEW RIGHT -->
+                <div class="lg:col-span-7">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-100 h-96 relative">
+                        <!-- Simulated Interactive Map Container -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.532304899144!2d-54.86901842363065!3d-29.1915999753637!2m3!1f0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95034c56254ed37f%3A0x6331a9aa665be7bb!2sAv.%20Get%C3%BAlio%20Vargas%2C%201894%20-%20Centro%2C%20Santiago%20-%20RS%2C%2097700-365!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 border-t border-slate-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                
+                <!-- COL 1: LOGO & ABOUT -->
+                <div class="space-y-4">
+                    <div class="h-12 w-auto inline-block overflow-hidden rounded-lg bg-black p-1 shadow border border-slate-800">
+                        <img src="codigo1.jpg" alt="Código B Logo" class="h-full w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x60/000000/FFE500?text=CODIGO+B'">
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        CÓDIGO B - Calçados, Confecções, Artigos Esportivos e Acessórios. Sua loja de referência em estilo e performance em Santiago/RS.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="https://www.instagram.com/lojacodigob/" target="_blank" rel="noopener" aria-label="Instagram da Código B" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-brand-yellow hover:text-black text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://www.facebook.com/lojacodigob/?locale=pt_BR" target="_blank" rel="noopener" aria-label="Facebook da Código B" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-brand-yellow hover:text-black text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/555532518371" target="_blank" rel="noopener" aria-label="WhatsApp da Código B" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-white text-white flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COL 2: NAVEGAÇÃO -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Navegação Rápida</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#hero" class="hover:text-brand-yellow transition">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-yellow transition">A Código B</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-yellow transition">Categorias de Produtos</a></li>
+                        <li><a href="#diferenciais" class="hover:text-brand-yellow transition">Nossos Diferenciais</a></li>
+                        <li><a href="#depoimentos" class="hover:text-brand-yellow transition">Avaliações no Google</a></li>
+                        <li><a href="#localizacao" class="hover:text-brand-yellow transition">Endereço e Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- COL 3: CATEGORIAS -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Principais Linhas</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#calcados-femininos" class="hover:text-brand-yellow transition">Calçados Femininos Bottero</a></li>
+                        <li><a href="#moda-fitness" class="hover:text-brand-yellow transition">Moda Fitness Run More</a></li>
+                        <li><a href="#artigos-esportivos" class="hover:text-brand-yellow transition">Chuteiras Nike & Adidas</a></li>
+                        <li><a href="#artigos-esportivos" class="hover:text-brand-yellow transition">Camisas Oficial Grêmio & Inter</a></li>
+                        <li><a href="#calcados-femininos" class="hover:text-brand-yellow transition">Sapatilhas em Couro Tramado</a></li>
+                    </ul>
+                </div>
+
+                <!-- COL 4: ATENDIMENTO LOCAL -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider">Loja Física em Santiago</h4>
+                    <p class="text-xs text-slate-400">Av. Getúlio Vargas, 1894 - Centro</p>
+                    <p class="text-xs text-slate-400">Santiago - RS, 97700-365</p>
+                    <p class="text-xs text-brand-yellow font-bold">(55) 3251-8371</p>
+                    <div class="pt-2">
+                        <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-semibold rounded-lg">
+                            <i class="fa-solid fa-circle text-[8px] mr-1 animate-pulse"></i> Atendimento via WhatsApp Ativo
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 CÓDIGO B - Calçados e Artigos Esportivos. Todos os direitos reservados.</p>
+                <p>Santiago - Rio Grande do Sul</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON WITH QUICK MODAL -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/555532518371?text=Olá!%20Vim%20pelo%20site%20da%20Código%20B%20e%20gostaria%20de%20atendimento!" 
+           target="_blank" 
+           aria-label="Atendimento via WhatsApp" 
+           class="pulse-btn flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold p-4 sm:px-6 sm:py-4 rounded-full shadow-2xl transition transform hover:scale-105 group">
+            <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
+            <span class="hidden sm:inline text-sm font-extrabold">Fale no WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- CAROUSEL SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // CAROUSEL LOGIC
+            const track = document.getElementById('carousel-track');
+            const slides = track ? Array.from(track.children) : [];
+            const nextButton = document.getElementById('next-slide');
+            const prevButton = document.getElementById('prev-slide');
+            const dotsNav = document.getElementById('carousel-dots');
+            const dots = dotsNav ? Array.from(dotsNav.children) : [];
+
+            let currentIndex = 0;
+            let slideInterval;
+
+            const updateCarousel = (index) => {
+                if (!track) return;
+                if (index < 0) currentIndex = slides.length - 1;
+                else if (index >= slides.length) currentIndex = 0;
+                else currentIndex = index;
+
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Update dots active state
+                dots.forEach((dot, idx) => {
+                    if (idx === currentIndex) {
+                        dot.classList.remove('bg-white/40');
+                        dot.classList.add('bg-brand-yellow');
+                    } else {
+                        dot.classList.remove('bg-brand-yellow');
+                        dot.classList.add('bg-white/40');
+                    }
+                });
+            };
+
+            const startAutoplay = () => {
+                stopAutoplay();
+                slideInterval = setInterval(() => {
+                    updateCarousel(currentIndex + 1);
+                }, 4500);
+            };
+
+            const stopAutoplay = () => {
+                if (slideInterval) clearInterval(slideInterval);
+            };
+
+            if (nextButton) {
+                nextButton.addEventListener('click', () => {
+                    updateCarousel(currentIndex + 1);
+                    startAutoplay();
+                });
+            }
+
+            if (prevButton) {
+                prevButton.addEventListener('click', () => {
+                    updateCarousel(currentIndex - 1);
+                    startAutoplay();
+                });
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateCarousel(index);
+                    startAutoplay();
+                });
+            });
+
+            // Touch support for swipe on mobile
+            let startX = 0;
+            if (track) {
+                track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                }, { passive: true });
+
+                track.addEventListener('touchend', (e) => {
+                    const endX = e.changedTouches[0].clientX;
+                    if (startX - endX > 50) {
+                        updateCarousel(currentIndex + 1);
+                        startAutoplay();
+                    } else if (endX - startX > 50) {
+                        updateCarousel(currentIndex - 1);
+                        startAutoplay();
+                    }
+                }, { passive: true });
+            }
+
+            startAutoplay();
+
+            // MOBILE MENU TOGGLE
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close menu when clicking nav items
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
