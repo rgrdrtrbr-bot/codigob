@@ -89,25 +89,25 @@
 <body class="bg-brand-light text-slate-900 font-sans antialiased selection:bg-brand-yellow selection:text-black">
 
     <!-- ANNOUNCEMENT TOP BAR -->
-    <div class="bg-slate-950 text-white text-xs py-2.5 px-4 border-b border-white/10">
+    <div class="bg-slate-950 text-white text-[11px] sm:text-xs py-2 px-4 border-b border-white/10 overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
-            <div class="flex items-center justify-center gap-2 font-medium">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <div class="flex items-center justify-center gap-2 font-medium whitespace-nowrap">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
                 <span class="text-amber-300 font-bold uppercase tracking-wider">Loja Física em Santiago/RS</span>
-                <span class="hidden md:inline text-slate-400">| Av. Getúlio Vargas, 1894 - Centro</span>
+                <span class="hidden lg:inline text-slate-400">| Av. Getúlio Vargas, 1894 - Centro</span>
             </div>
-            <div class="flex items-center gap-4 text-slate-300 text-xs">
+            <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-4 text-slate-300 text-[11px] sm:text-xs whitespace-nowrap">
                 <a href="tel:5532518371" class="hover:text-brand-yellow transition flex items-center gap-1.5 font-semibold">
                     <i class="fa-solid fa-phone text-brand-yellow"></i> (55) 3251-8371
                 </a>
                 <span class="text-slate-700">•</span>
-                <div class="flex items-center gap-3">
-                    <a href="https://www.instagram.com/lojacodigob/" target="_blank" rel="noopener" class="hover:text-amber-400 transition flex items-center gap-1 font-bold text-xs" aria-label="Instagram">
+                <div class="flex items-center gap-2.5">
+                    <a href="https://www.instagram.com/lojacodigob/" target="_blank" rel="noopener" class="hover:text-amber-400 transition flex items-center gap-1 font-bold" aria-label="Instagram">
                         <i class="fa-brands fa-instagram text-sm text-pink-500"></i>
                         <span>@lojacodigob</span>
                     </a>
                     <span class="text-slate-700">•</span>
-                    <a href="https://www.facebook.com/lojacodigob/?locale=pt_BR" target="_blank" rel="noopener" class="hover:text-amber-400 transition flex items-center gap-1 font-bold text-xs" aria-label="Facebook">
+                    <a href="https://www.facebook.com/lojacodigob/?locale=pt_BR" target="_blank" rel="noopener" class="hover:text-amber-400 transition flex items-center gap-1 font-bold" aria-label="Facebook">
                         <i class="fa-brands fa-facebook-f text-xs text-blue-500"></i>
                         <span>Facebook</span>
                     </a>
@@ -118,25 +118,25 @@
 
     <!-- MAIN NAVBAR -->
     <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 shadow-xs transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 gap-2 xl:gap-4">
                 
                 <!-- BRAND LOGO (UTILIZANDO IMAGEM CODIGO1.JPG) -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="h-11 w-auto overflow-hidden rounded-xl bg-slate-950 p-1.5 shadow-md border border-slate-800 transition duration-300 transform group-hover:scale-105">
+                <a href="#" class="flex items-center gap-2.5 shrink-0 group">
+                    <div class="h-10 sm:h-11 w-auto overflow-hidden rounded-xl bg-slate-950 p-1.5 shadow-md border border-slate-800 transition duration-300 transform group-hover:scale-105">
                         <img src="codigo1.jpg" alt="Código B Logo" class="h-full w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x60/000000/FFE500?text=C%C3%93DIGO+B'">
                     </div>
                     <div class="flex flex-col">
-                        <span class="font-display font-black text-xl tracking-tight text-slate-900 group-hover:text-amber-600 transition">CÓDIGO B</span>
-                        <span class="text-[9px] tracking-widest text-slate-500 font-extrabold uppercase">Calçados & Esportes</span>
+                        <span class="font-display font-black text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-amber-600 transition leading-none">CÓDIGO B</span>
+                        <span class="text-[8px] sm:text-[9px] tracking-widest text-slate-500 font-extrabold uppercase mt-1">Calçados & Esportes</span>
                     </div>
                 </a>
 
                 <!-- DESKTOP NAVIGATION LINKS -->
-                <nav class="hidden lg:flex items-center space-x-7 text-sm font-bold text-slate-700">
+                <nav class="hidden lg:flex items-center space-x-2.5 xl:space-x-5 text-xs xl:text-sm font-bold text-slate-700 whitespace-nowrap">
                     <a href="#hero" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all">Início</a>
-                    <a href="#reels-section" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all flex items-center gap-1.5">
-                        <span class="relative flex h-2 w-2">
+                    <a href="#reels-section" class="hover:text-amber-600 transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow hover:after:w-full after:transition-all flex items-center gap-1">
+                        <span class="relative flex h-2 w-2 shrink-0">
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
                           <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
                         </span>
@@ -150,12 +150,12 @@
                 </nav>
 
                 <!-- CTA HEADER BUTTON -->
-                <div class="hidden sm:flex items-center gap-3">
+                <div class="hidden sm:flex items-center shrink-0">
                     <a href="https://wa.me/555532518371?text=Olá!%20Vim%20pelo%20site%20da%20Código%20B%20e%20gostaria%20de%20atendimento!" 
                        target="_blank" 
-                       class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
-                        <i class="fa-brands fa-whatsapp text-base"></i>
-                        <span>Atendimento WhatsApp</span>
+                       class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-3.5 py-2.5 xl:px-5 rounded-full text-[11px] xl:text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 whitespace-nowrap">
+                        <i class="fa-brands fa-whatsapp text-sm xl:text-base"></i>
+                        <span>WhatsApp</span>
                     </a>
                 </div>
 
@@ -391,18 +391,23 @@
                 <!-- VIDEO CARD 1: CROCS BOAONDA (VIDEO1.MP4) -->
                 <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between video-card-hover group relative">
                     <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                        <video id="vid-1" class="w-full h-full object-cover" loop muted playsinline preload="metadata">
+                        <video id="vid-1" class="w-full h-full object-cover" loop playsinline preload="metadata">
                             <source src="video1.mp4" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         
                         <!-- BADGE TOP -->
-                        <div class="absolute top-3 left-3 bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow">
+                        <div class="absolute top-3 left-3 bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow z-10">
                             <i class="fa-solid fa-star"></i> Toda Família
                         </div>
 
+                        <!-- BOTÃO DE CONTROLE DE SOM -->
+                        <button id="sound-btn-vid-1" onclick="toggleMute('vid-1', event)" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-slate-900 text-slate-300 flex items-center justify-center text-xs backdrop-blur-md border border-white/20 transition" title="Ativar Som">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+
                         <!-- CONTROL OVERLAY -->
-                        <button onclick="togglePlay('vid-1', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                        <button onclick="togglePlay('vid-1', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
                             <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition">
                                 <i class="fa-solid fa-play ml-0.5"></i>
                             </div>
@@ -425,16 +430,21 @@
                 <!-- VIDEO CARD 2: OLYMPIKUS CORRE FOCO (VIDEO2.MP4) -->
                 <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between video-card-hover group relative">
                     <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                        <video id="vid-2" class="w-full h-full object-cover" loop muted playsinline preload="metadata">
+                        <video id="vid-2" class="w-full h-full object-cover" loop playsinline preload="metadata">
                             <source src="video2.mp4" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         
-                        <div class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow">
+                        <div class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow z-10">
                             <i class="fa-solid fa-person-running"></i> Corre Foco
                         </div>
 
-                        <button onclick="togglePlay('vid-2', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                        <!-- BOTÃO DE CONTROLE DE SOM -->
+                        <button id="sound-btn-vid-2" onclick="toggleMute('vid-2', event)" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-slate-900 text-slate-300 flex items-center justify-center text-xs backdrop-blur-md border border-white/20 transition" title="Ativar Som">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+
+                        <button onclick="togglePlay('vid-2', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
                             <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition">
                                 <i class="fa-solid fa-play ml-0.5"></i>
                             </div>
@@ -457,16 +467,21 @@
                 <!-- VIDEO CARD 3: ADIZERO EVO SL (VIDEO3.MP4) -->
                 <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between video-card-hover group relative">
                     <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                        <video id="vid-3" class="w-full h-full object-cover" loop muted playsinline preload="metadata">
+                        <video id="vid-3" class="w-full h-full object-cover" loop playsinline preload="metadata">
                             <source src="video3.mp4" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         
-                        <div class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow">
+                        <div class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow z-10">
                             <i class="fa-solid fa-bolt"></i> Unboxing Adidas
                         </div>
 
-                        <button onclick="togglePlay('vid-3', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                        <!-- BOTÃO DE CONTROLE DE SOM -->
+                        <button id="sound-btn-vid-3" onclick="toggleMute('vid-3', event)" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-slate-900 text-slate-300 flex items-center justify-center text-xs backdrop-blur-md border border-white/20 transition" title="Ativar Som">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+
+                        <button onclick="togglePlay('vid-3', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
                             <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition">
                                 <i class="fa-solid fa-play ml-0.5"></i>
                             </div>
@@ -489,16 +504,21 @@
                 <!-- VIDEO CARD 4: MOMENTOS E EMOÇÕES (VIDEO4.MP4) -->
                 <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between video-card-hover group relative">
                     <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                        <video id="vid-4" class="w-full h-full object-cover" loop muted playsinline preload="metadata">
+                        <video id="vid-4" class="w-full h-full object-cover" loop playsinline preload="metadata">
                             <source src="video4.mp4" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         
-                        <div class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow">
+                        <div class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow z-10">
                             <i class="fa-solid fa-heart"></i> Presente Sempre
                         </div>
 
-                        <button onclick="togglePlay('vid-4', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                        <!-- BOTÃO DE CONTROLE DE SOM -->
+                        <button id="sound-btn-vid-4" onclick="toggleMute('vid-4', event)" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-slate-900 text-slate-300 flex items-center justify-center text-xs backdrop-blur-md border border-white/20 transition" title="Ativar Som">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+
+                        <button onclick="togglePlay('vid-4', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
                             <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition">
                                 <i class="fa-solid fa-play ml-0.5"></i>
                             </div>
@@ -521,16 +541,21 @@
                 <!-- VIDEO CARD 5: SANDÁLIAS VIZZANO (VIDEO5.MP4) -->
                 <div class="bg-slate-950 rounded-3xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between video-card-hover group relative">
                     <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                        <video id="vid-5" class="w-full h-full object-cover" loop muted playsinline preload="metadata">
+                        <video id="vid-5" class="w-full h-full object-cover" loop playsinline preload="metadata">
                             <source src="video5.mp4" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         
-                        <div class="absolute top-3 left-3 bg-emerald-500 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow">
+                        <div class="absolute top-3 left-3 bg-emerald-500 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow z-10">
                             <i class="fa-solid fa-gem"></i> Vizzano Glam
                         </div>
 
-                        <button onclick="togglePlay('vid-5', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                        <!-- BOTÃO DE CONTROLE DE SOM -->
+                        <button id="sound-btn-vid-5" onclick="toggleMute('vid-5', event)" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/60 hover:bg-slate-900 text-slate-300 flex items-center justify-center text-xs backdrop-blur-md border border-white/20 transition" title="Ativar Som">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </button>
+
+                        <button onclick="togglePlay('vid-5', this)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition z-10">
                             <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition">
                                 <i class="fa-solid fa-play ml-0.5"></i>
                             </div>
@@ -1300,12 +1325,12 @@
             }
         });
 
-        // VIDEO PLAY / PAUSE LOGIC
+        // VIDEO PLAY / PAUSE / AUDIO LOGIC
         function togglePlay(vidId, btnElement) {
             const video = document.getElementById(vidId);
             if (!video) return;
 
-            // Pause all other videos first
+            // Pausa outros vídeos em execução
             document.querySelectorAll('video').forEach(v => {
                 if (v.id !== vidId) {
                     v.pause();
@@ -1313,7 +1338,22 @@
             });
 
             if (video.paused) {
-                video.play();
+                // Ativa o som na ação de clique do usuário
+                video.muted = false;
+                
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        updateSoundIcon(vidId);
+                    }).catch(error => {
+                        console.log("Autoplay com som restrito pelo navegador:", error);
+                        // Fallback: se o navegador proibir som direto, toca mutado
+                        video.muted = true;
+                        video.play();
+                        updateSoundIcon(vidId);
+                    });
+                }
+                
                 if (btnElement) {
                     btnElement.style.opacity = '0';
                 }
@@ -1322,6 +1362,35 @@
                 if (btnElement) {
                     btnElement.style.opacity = '1';
                 }
+            }
+        }
+
+        // ALTERNAR MUTE / UNMUTE MANUALMENTE
+        function toggleMute(vidId, event) {
+            if (event) event.stopPropagation();
+            const video = document.getElementById(vidId);
+            if (!video) return;
+
+            video.muted = !video.muted;
+            updateSoundIcon(vidId);
+        }
+
+        // ATUALIZAR ÍCONE DO BOTÃO DE SOM
+        function updateSoundIcon(vidId) {
+            const video = document.getElementById(vidId);
+            const soundBtn = document.getElementById('sound-btn-' + vidId);
+            if (!video || !soundBtn) return;
+
+            if (video.muted) {
+                soundBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+                soundBtn.title = "Ativar Som";
+                soundBtn.classList.remove('bg-emerald-500', 'text-white');
+                soundBtn.classList.add('bg-black/60', 'text-slate-300');
+            } else {
+                soundBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+                soundBtn.title = "Silenciar";
+                soundBtn.classList.remove('bg-black/60', 'text-slate-300');
+                soundBtn.classList.add('bg-emerald-500', 'text-white');
             }
         }
     </script>
