@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código B | Calçados, Confecções e Artigos Esportivos - Santiago/RS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFDD00',
+                            black: '#0A0A0B',
+                            dark: '#121316',
+                            gray: '#1E2025',
+                            lightGray: '#F4F5F7',
+                            accent: '#FF3366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-gradient-yellow {
+            background: linear-gradient(135deg, #FFDD00 0%, #FFA800 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-yellow {
+            background: linear-gradient(135deg, #FFDD00 0%, #FFA800 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* CHRISTMAS THEME ANIMATIONS & ACCENTS */
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 30;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(105vh) rotate(360deg); opacity: 0.2; }
+        }
+        .bg-gradient-christmas {
+            background: linear-gradient(135deg, #D97706 0%, #DC2626 50%, #B91C1C 100%);
+        }
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(255, 221, 0, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-yellow selection:text-slate-950">
+
+    <!-- SNOWFLAKE CONTAINER FOR HOLIDAY VIBE -->
+    <div class="snow-container" id="snow-container"></div>
+
+    <!-- ANNOUNCEMENT BAR TOP - HOLIDAY EDITION -->
+    <div class="bg-gradient-to-r from-red-600 via-amber-500 to-red-600 text-white text-[11px] sm:text-xs font-black py-2 px-4 shadow-xl sticky top-0 z-50 border-b border-yellow-300/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3 overflow-x-auto whitespace-nowrap hide-scrollbar">
+                <span class="inline-flex items-center gap-1.5 font-black uppercase tracking-wider bg-black/20 px-2.5 py-0.5 rounded-full border border-white/20">
+                    <i class="fa-solid fa-gift text-yellow-300 animate-bounce"></i> NATAL CÓDIGO B 2026
+                </span>
+                <span class="hidden md:inline">•</span>
+                <span class="inline-flex items-center gap-1.5 font-bold">
+                    <i class="fa-solid fa-box-open text-yellow-300"></i> Embalagem de Presente Cortesia + Cartão
+                </span>
+                <span class="hidden md:inline">•</span>
+                <span class="hidden md:inline-flex items-center gap-1.5 font-bold">
+                    <i class="fa-solid fa-truck-fast text-yellow-300"></i> Entrega Rápida em Santiago e Região
+                </span>
+            </div>
+            <div class="flex items-center gap-4 shrink-0">
+                <a href="https://www.instagram.com/lojacodigob/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition flex items-center gap-1 font-bold">
+                    <i class="fa-brands fa-instagram text-sm"></i> <span class="hidden sm:inline">@lojacodigob</span>
+                </a>
+                <a href="https://www.facebook.com/lojacodigob/?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition flex items-center gap-1 font-bold">
+                    <i class="fa-brands fa-facebook text-sm"></i> <span class="hidden sm:inline">Facebook</span>
+                </a>
+                <button onclick="toggleERPModal()" class="bg-slate-950 text-brand-yellow hover:bg-slate-900 px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider transition flex items-center gap-1 shadow">
+                    <i class="fa-solid fa-chart-line"></i> Painel ERP
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-8 sm:top-8 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-4">
+                
+                <!-- LOGO -->
+                <a href="#" class="flex items-center gap-3 shrink-0">
+                    <img src="codigo1.jpg" alt="Código B Logo" class="h-10 sm:h-12 w-auto object-contain rounded-lg border border-brand-yellow/30 shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/150x50/111827/FFDD00?text=CODIGO+B'">
+                </a>
+
+                <!-- DESKTOP NAVIGATION -->
+                <nav class="hidden lg:flex items-center space-x-2 xl:space-x-5 text-xs xl:text-sm font-extrabold text-slate-300">
+                    <a href="#inicio" class="hover:text-brand-yellow transition py-2 px-1 whitespace-nowrap">Início</a>
+                    <a href="#apresentacao" class="hover:text-brand-yellow transition py-2 px-1 whitespace-nowrap">5 Motivos</a>
+                    <a href="#ecommerce" class="hover:text-brand-yellow transition py-2 px-1 whitespace-nowrap text-brand-yellow">Loja Virtual</a>
+                    <a href="#reels" class="hover:text-brand-yellow transition py-2 px-1 whitespace-nowrap">Reels & Vídeos</a>
+                    <a href="#depoimentos" class="hover:text-brand-yellow transition py-2 px-1 whitespace-nowrap">Avaliações</a>
+                    <a href="#localizacao" class="hover:text-brand-yellow transition py-2 px-1 whitespace-nowrap">Santiago/RS</a>
+                </nav>
+
+                <!-- HEADER ACTIONS & CART -->
+                <div class="flex items-center gap-3 shrink-0">
+                    <!-- SEARCH INPUT -->
+                    <div class="hidden sm:flex items-center bg-slate-950 border border-slate-800 rounded-full px-3 py-1.5 text-xs focus-within:border-brand-yellow transition">
+                        <i class="fa-solid fa-magnifying-glass text-slate-400 mr-2"></i>
+                        <input type="text" onkeyup="handleSearch(this.value)" placeholder="Buscar produto, marca..." class="bg-transparent text-white focus:outline-none w-28 md:w-36">
+                    </div>
+
+                    <!-- SHOPPING CART BUTTON -->
+                    <button onclick="toggleCart()" class="relative bg-slate-800 hover:bg-slate-700 text-white p-2.5 sm:px-4 sm:py-2.5 rounded-full font-extrabold text-xs transition flex items-center gap-2 border border-slate-700 shadow-lg">
+                        <i class="fa-solid fa-cart-shopping text-brand-yellow text-sm"></i>
+                        <span class="hidden sm:inline">Carrinho</span>
+                        <span id="cart-count" class="bg-brand-yellow text-slate-950 font-black text-[10px] px-2 py-0.5 rounded-full shadow-inner">0</span>
+                    </button>
+
+                    <!-- WHATSAPP FAST BUTTON -->
+                    <a href="https://wa.me/555532518371?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20C%C3%B3digo%20B%20e%20gostaria%20de%20atendimento!" target="_blank" rel="noopener noreferrer" class="hidden sm:flex bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs px-4 py-2.5 rounded-full transition items-center gap-2 shadow-lg shadow-emerald-500/20">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+
+                    <!-- MOBILE MENU TOGGLE -->
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden text-slate-300 hover:text-white p-2 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <div class="flex items-center bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs mb-3">
+                <i class="fa-solid fa-magnifying-glass text-slate-400 mr-2"></i>
+                <input type="text" onkeyup="handleSearch(this.value)" placeholder="Buscar no e-commerce..." class="bg-transparent text-white focus:outline-none w-full">
+            </div>
+            <a href="#inicio" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-200 font-extrabold text-sm py-2 border-b border-slate-800">Início</a>
+            <a href="#apresentacao" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-200 font-extrabold text-sm py-2 border-b border-slate-800">5 Motivos Para Comprar</a>
+            <a href="#ecommerce" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-brand-yellow font-black text-sm py-2 border-b border-slate-800">Loja Virtual & Produtos</a>
+            <a href="#reels" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-200 font-extrabold text-sm py-2 border-b border-slate-800">Vídeos & Reels</a>
+            <a href="#depoimentos" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-200 font-extrabold text-sm py-2 border-b border-slate-800">Avaliações do Google</a>
+            <a href="#localizacao" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-200 font-extrabold text-sm py-2">Loja Física Santiago/RS</a>
+        </div>
+    </header>
+
+    <main id="inicio">
+        
+        <!-- HERO SECTION WITH DYNAMIC CAROUSEL -->
+        <section class="relative bg-slate-950 pt-8 pb-16 overflow-hidden border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- HERO TEXT LEFT -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-brand-yellow/30 text-brand-yellow text-xs font-black uppercase tracking-wider shadow-inner">
+                            <i class="fa-solid fa-bolt"></i> Moda, Calçados & Artigos Esportivos
+                        </div>
+                        <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-white leading-none tracking-tight">
+                            Esporte no Sangue. <br>
+                            <span class="text-gradient-yellow">Estilo no Dia a Dia.</span>
+                        </h1>
+                        <!-- HOLIDAY BADGE -->
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-950/80 border border-red-500/40 text-red-400 text-xs font-black uppercase tracking-wider">
+                            <i class="fa-solid fa-holly-berry text-red-500"></i> Coleção de Natal & Fim de Ano 🎄
+                        </div>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            A <strong class="text-white">Código B</strong> preparou seleções inesquecíveis para o seu Natal! Encontre o presente perfeito com cartões personalizados e embalagem especial cortesia.
+                        </p>
+
+                        <!-- HERO ACTIONS -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#ecommerce" class="bg-gradient-to-r from-red-600 via-amber-500 to-brand-yellow hover:opacity-95 text-slate-950 font-black text-sm px-7 py-3.5 rounded-full transition transform hover:-translate-y-0.5 shadow-2xl shadow-red-500/20 flex items-center gap-2 border border-yellow-300/40">
+                                <i class="fa-solid fa-gift text-base"></i> Ver Presentes de Natal
+                            </a>
+                            <a href="https://wa.me/555532518371?text=Ol%C3%A1!%20Gostaria%20de%20ajuda%20para%20escolher%20um%20presente%20de%20Natal!" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm px-6 py-3.5 rounded-full border border-slate-800 transition flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i> Sugestões de Natal
+                            </a>
+                        </div>
+
+                        <!-- BRAND LOGO BADGES -->
+                        <div class="pt-6 border-t border-slate-900 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-slate-400 text-xs font-black uppercase tracking-widest">
+                            <span class="hover:text-brand-yellow transition">NIKE</span>
+                            <span>•</span>
+                            <span class="hover:text-brand-yellow transition">ADIDAS</span>
+                            <span>•</span>
+                            <span class="hover:text-brand-yellow transition">UMBRO</span>
+                            <span>•</span>
+                            <span class="hover:text-brand-yellow transition">BOTTERO</span>
+                            <span>•</span>
+                            <span class="hover:text-brand-yellow transition">RUN MORE</span>
+                        </div>
+                    </div>
+
+                    <!-- HERO CAROUSEL RIGHT -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl aspect-[4/3] sm:aspect-[16/11] bg-slate-900 group">
+                            
+                            <!-- CAROUSEL ITEM 1 -->
+                            <div class="carousel-item block w-full h-full relative transition duration-700">
+                                <img src="codigo3.jpg" alt="Adidas Adizero Evo SL Código B" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='codigo7.jpg'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 backdrop-blur-md">
+                                    <span class="text-[10px] font-black text-brand-yellow uppercase tracking-wider block">Lançamento Exclusivo</span>
+                                    <h3 class="font-black text-white text-sm sm:text-base">ADIZERO EVO SL Adidas</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Leveza extrema e amortecimento de elite.</p>
+                                </div>
+                            </div>
+
+                            <!-- CAROUSEL ITEM 2 -->
+                            <div class="carousel-item hidden w-full h-full relative transition duration-700">
+                                <img src="codigo10.jpg" alt="Bottero Salto Bloco Código B" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='codigo8.jpg'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 backdrop-blur-md">
+                                    <span class="text-[10px] font-black text-brand-yellow uppercase tracking-wider block">Calçados Femininos</span>
+                                    <h3 class="font-black text-white text-sm sm:text-base">Bottero Couro Legitimo</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Elegância e conforto para o seu dia a dia.</p>
+                                </div>
+                            </div>
+
+                            <!-- CAROUSEL ITEM 3 -->
+                            <div class="carousel-item hidden w-full h-full relative transition duration-700">
+                                <img src="gremio.jpg" alt="Mantos Oficiais Código B" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='inter.jpg'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 backdrop-blur-md">
+                                    <span class="text-[10px] font-black text-brand-yellow uppercase tracking-wider block">Mantos Oficiais</span>
+                                    <h3 class="font-black text-white text-sm sm:text-base">Grêmio & Internacional</h3>
+                                    <p class="text-xs text-slate-300 mt-0.5">Camisas oficiais com envio imediato.</p>
+                                </div>
+                            </div>
+
+                            <!-- CAROUSEL CONTROLS -->
+                            <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-950/70 hover:bg-slate-950 text-white flex items-center justify-center border border-white/10 transition">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-950/70 hover:bg-slate-950 text-white flex items-center justify-center border border-white/10 transition">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <!-- CAROUSEL DOTS -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10">
+                                <button onclick="goToSlide(0)" class="carousel-dot w-8 h-2 rounded-full bg-brand-yellow transition-all"></button>
+                                <button onclick="goToSlide(1)" class="carousel-dot w-3 h-2 rounded-full bg-white/50 transition-all"></button>
+                                <button onclick="goToSlide(2)" class="carousel-dot w-3 h-2 rounded-full bg-white/50 transition-all"></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: FEATURED PRESENTATION VIDEO - 5 MOTIVOS PARA COMPRAR NA CÓDIGO B -->
+        <section id="apresentacao" class="py-12 bg-slate-950 text-white border-b border-slate-800 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 rounded-3xl p-6 lg:p-10 border border-brand-yellow/30 shadow-2xl relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- LEFT DESCRIPTION & MOTIVES -->
+                        <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-xs font-black uppercase tracking-wider">
+                                <i class="fa-solid fa-circle-play text-brand-yellow"></i> Apresentação Oficial
+                            </span>
+                            <h2 class="font-display font-black text-2xl sm:text-4xl text-white leading-tight">
+                                5 Motivos Para Comprar na <span class="text-gradient-yellow">Código B</span>
+                            </h2>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto lg:mx-0">
+                                Conheça nossa equipe em Santiago/RS e entenda por que somos a referência em produtos originais, preços justos e facilidade de pagamento!
+                            </p>
+
+                            <!-- 5 MOTIVES GRID -->
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+                                <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800">
+                                    <span class="text-brand-yellow font-extrabold text-xs block">01. Grandes Marcas</span>
+                                    <span class="text-[10px] text-slate-400">Nike, Adidas, Olympikus...</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800">
+                                    <span class="text-brand-yellow font-extrabold text-xs block">02. Variedade Chuteiras</span>
+                                    <span class="text-[10px] text-slate-400">Futsal, Campo e Society</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800">
+                                    <span class="text-brand-yellow font-extrabold text-xs block">03. 100% Originais</span>
+                                    <span class="text-[10px] text-slate-400">Garantia direta dos fabricantes</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800">
+                                    <span class="text-brand-yellow font-extrabold text-xs block">04. Vestuário Completo</span>
+                                    <span class="text-[10px] text-slate-400">Roupas e Moda Fitness</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800">
+                                    <span class="text-brand-yellow font-extrabold text-xs block">05. Crediário Próprio</span>
+                                    <span class="text-[10px] text-slate-400">Em até 5x sem juros no carnê</span>
+                                </div>
+                                <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800">
+                                    <span class="text-brand-yellow font-extrabold text-xs block">Equipe Nota 10</span>
+                                    <span class="text-[10px] text-slate-400">Atendimento acolhedor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT FEATURED VIDEO PLAYER -->
+                        <div class="lg:col-span-5">
+                            <div class="relative rounded-3xl overflow-hidden border-2 border-brand-yellow/40 shadow-2xl aspect-[9/16] max-w-xs mx-auto bg-slate-950 group">
+                                <video id="main-presentation-video" class="w-full h-full object-cover" poster="codigo1.jpg" loop playsinline preload="auto">
+                                    <source src="videoapresentacao_3.mp4" type="video/mp4">
+                                    <source src="videoapresentacao_2.mp4" type="video/mp4">
+                                    <source src="videoapresentacao.mp4" type="video/mp4">
+                                </video>
+                                
+                                <button onclick="togglePlayVideoWithSound('main-presentation-video')" class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition">
+                                    <div class="w-16 h-16 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center font-black shadow-2xl transform group-hover:scale-110 transition">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </button>
+
+                                <div class="absolute top-3 right-3 z-20">
+                                    <button onclick="toggleMuteVideo('main-presentation-video', this)" class="bg-slate-950/80 text-white p-2 rounded-full border border-white/20 text-xs hover:bg-slate-900 transition">
+                                        <i class="fa-solid fa-volume-xmark"></i>
+                                    </button>
+                                </div>
+
+                                <div class="absolute bottom-3 left-3 right-3 p-3 bg-slate-950/90 backdrop-blur-md rounded-2xl border border-slate-800 text-center">
+                                    <span class="text-[11px] font-extrabold text-brand-yellow uppercase tracking-wider block">Assista em Vídeo</span>
+                                    <span class="text-[10px] text-slate-300">Conheça a equipe da Código B</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: E-COMMERCE STORE & PRODUCTS -->
+        <section id="ecommerce" class="py-16 bg-slate-900 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- CHRISTMAS COUNTDOWN & BANNER -->
+                <div class="mb-10 bg-gradient-to-r from-red-950 via-slate-950 to-red-950 border-2 border-red-600/40 rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-left z-10">
+                        <span class="bg-red-600/20 text-red-400 border border-red-500/30 text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-clock text-amber-400"></i> Oferta de Natal por Tempo Limitado
+                        </span>
+                        <h3 class="font-display font-black text-2xl sm:text-3xl text-white">
+                            Garanta os Presentes da Família com <span class="text-brand-yellow">Desconto de Natal</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-300 max-w-xl">
+                            Todas as compras acompanham embalagem especial de Natal cortesia da loja Código B em Santiago!
+                        </p>
+                    </div>
+
+                    <!-- COUNTDOWN TIMER -->
+                    <div class="flex items-center gap-3 shrink-0 z-10">
+                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
+                            <span id="timer-days" class="font-black text-xl text-brand-yellow block">14</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Dias</span>
+                        </div>
+                        <span class="text-white font-black text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
+                            <span id="timer-hours" class="font-black text-xl text-brand-yellow block">08</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Horas</span>
+                        </div>
+                        <span class="text-white font-black text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
+                            <span id="timer-mins" class="font-black text-xl text-brand-yellow block">42</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STORE HEADER -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <span class="text-brand-yellow font-black text-xs uppercase tracking-widest block mb-1">
+                            <i class="fa-solid fa-gift text-red-500"></i> Vitrine de Natal Código B
+                        </span>
+                        <h2 class="font-display font-black text-3xl sm:text-4xl text-white">
+                            Presentes que Encantam no Natal
+                        </h2>
+                    </div>
+
+                    <!-- CATEGORY FILTERS -->
+                    <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
+                        <button onclick="filterCategory('all', this)" class="cat-btn bg-brand-yellow text-slate-950 font-black text-xs px-4 py-2 rounded-full transition whitespace-nowrap">
+                            Todos os Produtos
+                        </button>
+                        <button onclick="filterCategory('Natal', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap flex items-center gap-1">
+                            <i class="fa-solid fa-tree text-red-500"></i> Especial Natal
+                        </button>
+                        <button onclick="filterCategory('Confecção', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap">
+                            Confecções
+                        </button>
+                        <button onclick="filterCategory('Calçados', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap">
+                            Calçados Femininos
+                        </button>
+                        <button onclick="filterCategory('Tênis', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap">
+                            Tênis de Corrida
+                        </button>
+                        <button onclick="filterCategory('Chuteiras', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap">
+                            Chuteiras
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCTS GRID (DYNAMICALLY RENDERED BY JS) -->
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Products generated dynamically in JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: REELS & VIDEO SHOWCASE -->
+        <section id="reels" class="py-16 bg-slate-950 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-brand-yellow font-black text-xs uppercase tracking-widest block mb-1">
+                        <i class="fa-solid fa-play"></i> Mídias Sociais & Destaques
+                    </span>
+                    <h2 class="font-display font-black text-3xl sm:text-4xl text-white">
+                        Sinta a Vibe da Nossa Loja
+                    </h2>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2">
+                        Vídeos curtos com novidades, provadores e dicas de calçados das nossas redes sociais.
+                    </p>
+                </div>
+
+                <!-- REELS GRID -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    
+                    <!-- REEL 1 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
+                            <video id="reel-1" class="w-full h-full object-cover" poster="codigo9.jpg" loop playsinline preload="auto">
+                                <source src="video1.mp4" type="video/mp4">
+                            </video>
+                            <button onclick="togglePlayVideoWithSound('reel-1')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
+                                <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center font-black shadow-lg">
+                                    <i class="fa-solid fa-play text-base ml-0.5"></i>
+                                </div>
+                            </button>
+                            <button onclick="toggleMuteVideo('reel-1', this)" class="absolute top-2 right-2 bg-slate-950/80 text-white p-1.5 rounded-full text-[10px]">
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 text-center bg-slate-900">
+                            <span class="text-brand-yellow font-black text-[10px] uppercase">Crocs & Boaonda</span>
+                            <h4 class="font-bold text-white text-xs mt-0.5">Linha Família Conforto</h4>
+                            <a href="https://wa.me/555532518371?text=Quero%20saber%20mais%20sobre%20os%20Crocs%20e%20Boaonda!" target="_blank" rel="noopener noreferrer" class="mt-2 block w-full py-1.5 bg-slate-800 hover:bg-brand-yellow hover:text-slate-950 text-slate-200 text-[11px] font-extrabold rounded-xl transition">
+                                Consultar Tamanhos
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- REEL 2 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
+                            <video id="reel-2" class="w-full h-full object-cover" poster="codigo5.jpg" loop playsinline preload="auto">
+                                <source src="video2.mp4" type="video/mp4">
+                            </video>
+                            <button onclick="togglePlayVideoWithSound('reel-2')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
+                                <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center font-black shadow-lg">
+                                    <i class="fa-solid fa-play text-base ml-0.5"></i>
+                                </div>
+                            </button>
+                            <button onclick="toggleMuteVideo('reel-2', this)" class="absolute top-2 right-2 bg-slate-950/80 text-white p-1.5 rounded-full text-[10px]">
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 text-center bg-slate-900">
+                            <span class="text-brand-yellow font-black text-[10px] uppercase">Olympikus Corre</span>
+                            <h4 class="font-bold text-white text-xs mt-0.5">Moda Fitness & Corrida</h4>
+                            <a href="https://wa.me/555532518371?text=Tenho%20interesse%20na%20linha%20Olympikus%20Corre%20Foco!" target="_blank" rel="noopener noreferrer" class="mt-2 block w-full py-1.5 bg-slate-800 hover:bg-brand-yellow hover:text-slate-950 text-slate-200 text-[11px] font-extrabold rounded-xl transition">
+                                Consultar Tamanhos
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- REEL 3 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
+                            <video id="reel-3" class="w-full h-full object-cover" poster="codigo3.jpg" loop playsinline preload="auto">
+                                <source src="video3.mp4" type="video/mp4">
+                            </video>
+                            <button onclick="togglePlayVideoWithSound('reel-3')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
+                                <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center font-black shadow-lg">
+                                    <i class="fa-solid fa-play text-base ml-0.5"></i>
+                                </div>
+                            </button>
+                            <button onclick="toggleMuteVideo('reel-3', this)" class="absolute top-2 right-2 bg-slate-950/80 text-white p-1.5 rounded-full text-[10px]">
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 text-center bg-slate-900">
+                            <span class="text-brand-yellow font-black text-[10px] uppercase">Adidas Performance</span>
+                            <h4 class="font-bold text-white text-xs mt-0.5">Adizero Evo SL</h4>
+                            <a href="https://wa.me/555532518371?text=Gostaria%20de%20saber%20o%20valor%20do%20Adidas%20Adizero%20Evo%20SL!" target="_blank" rel="noopener noreferrer" class="mt-2 block w-full py-1.5 bg-slate-800 hover:bg-brand-yellow hover:text-slate-950 text-slate-200 text-[11px] font-extrabold rounded-xl transition">
+                                Consultar Numeração
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- REEL 4 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
+                            <video id="reel-4" class="w-full h-full object-cover" poster="codigo8.jpg" loop playsinline preload="auto">
+                                <source src="video4.mp4" type="video/mp4">
+                            </video>
+                            <button onclick="togglePlayVideoWithSound('reel-4')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
+                                <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center font-black shadow-lg">
+                                    <i class="fa-solid fa-play text-base ml-0.5"></i>
+                                </div>
+                            </button>
+                            <button onclick="toggleMuteVideo('reel-4', this)" class="absolute top-2 right-2 bg-slate-950/80 text-white p-1.5 rounded-full text-[10px]">
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 text-center bg-slate-900">
+                            <span class="text-brand-yellow font-black text-[10px] uppercase">Presente nos Momentos</span>
+                            <h4 class="font-bold text-white text-xs mt-0.5">Calçados para a Vida</h4>
+                            <a href="https://wa.me/555532518371?text=Quero%20uma%20dica%20de%20presente%20de%20cal%C3%A7ado!" target="_blank" rel="noopener noreferrer" class="mt-2 block w-full py-1.5 bg-slate-800 hover:bg-brand-yellow hover:text-slate-950 text-slate-200 text-[11px] font-extrabold rounded-xl transition">
+                                Pedir Dica no Whats
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- REEL 5 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
+                        <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
+                            <video id="reel-5" class="w-full h-full object-cover" poster="codigo10.jpg" loop playsinline preload="auto">
+                                <source src="video5.mp4" type="video/mp4">
+                            </video>
+                            <button onclick="togglePlayVideoWithSound('reel-5')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
+                                <div class="w-12 h-12 rounded-full bg-brand-yellow text-slate-950 flex items-center justify-center font-black shadow-lg">
+                                    <i class="fa-solid fa-play text-base ml-0.5"></i>
+                                </div>
+                            </button>
+                            <button onclick="toggleMuteVideo('reel-5', this)" class="absolute top-2 right-2 bg-slate-950/80 text-white p-1.5 rounded-full text-[10px]">
+                                <i class="fa-solid fa-volume-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 text-center bg-slate-900">
+                            <span class="text-brand-yellow font-black text-[10px] uppercase">Vizzano Glamour</span>
+                            <h4 class="font-bold text-white text-xs mt-0.5">Sandálias de Salto</h4>
+                            <a href="https://wa.me/555532518371?text=Quero%20conhecer%20as%20sand%C3%A1lias%20Vizzano!" target="_blank" rel="noopener noreferrer" class="mt-2 block w-full py-1.5 bg-slate-800 hover:bg-brand-yellow hover:text-slate-950 text-slate-200 text-[11px] font-extrabold rounded-xl transition">
+                                Ver Modelos
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: GOOGLE REVIEWS & SOCIAL PROOF -->
+        <section id="depoimentos" class="py-16 bg-slate-900 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-slate-950 rounded-3xl p-8 border border-slate-800 shadow-2xl relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <div class="lg:col-span-4 space-y-4 text-center lg:text-left">
+                            <div class="inline-flex items-center gap-2 bg-amber-400/10 text-amber-400 font-black text-xs px-3 py-1.5 rounded-full border border-amber-400/20">
+                                <i class="fa-brands fa-google"></i> Google Avaliações
+                            </div>
+                            <h3 class="font-display font-black text-3xl text-white">
+                                Quem compra na Código B, recomenda!
+                            </h3>
+                            <div class="flex items-center justify-center lg:justify-start gap-2">
+                                <span class="font-black text-3xl text-brand-yellow">4.8</span>
+                                <div>
+                                    <div class="text-amber-400 text-sm">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <span class="text-xs text-slate-400 font-bold">Mais de 4.346 avaliações de clientes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TESTIMONIAL CARDS -->
+                        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
+                                <div class="text-amber-400 text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs italic leading-relaxed">
+                                    "Produto chegou embalado com muito zelo e ainda veio um cartão de mensagem carinhoso. Atendimento nota 10!"
+                                </p>
+                                <span class="text-[11px] font-extrabold text-white block">— Cliente do Google</span>
+                            </div>
+
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
+                                <div class="text-amber-400 text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-300 text-xs italic leading-relaxed">
+                                    "As funcionárias (os) são show de bola, atenciosas, proativas e muito dedicadas! Recomendo de olhos fechados."
+                                </p>
+                                <span class="text-[11px] font-extrabold text-white block">— Cliente Frequente de Santiago</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: LOCATION & STORE INFO -->
+        <section id="localizacao" class="py-16 bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="text-brand-yellow font-black text-xs uppercase tracking-widest block">
+                            <i class="fa-solid fa-store"></i> Nossa Loja Física
+                        </span>
+                        <h2 class="font-display font-black text-3xl sm:text-4xl text-white">
+                            Venha tomar um café conosco em Santiago!
+                        </h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Ambiente moderno, climatizado e com uma equipe pronta para lhe oferecer a melhor experiência de compra em calçados, confecções e artigos esportivos.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-yellow shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Endereço</h4>
+                                    <p class="text-xs text-slate-400">Av. Getúlio Vargas, 1894 - Centro, Santiago - RS, 97700-365</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-yellow shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Horário de Funcionamento</h4>
+                                    <p class="text-xs text-slate-400">Segunda a Sábado: 08:30 às 12:00 | Reabre das 14:00 às 18:30</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brand-yellow shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Telefone & WhatsApp</h4>
+                                    <p class="text-xs text-slate-400">(55) 3251-8371</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="https://maps.google.com/?q=Av.+Getúlio+Vargas,+1894+-+Centro,+Santiago+-+RS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-brand-yellow border border-brand-yellow/30 font-black text-xs px-5 py-3 rounded-full transition">
+                                <i class="fa-solid fa-route"></i> Abrir Rota no Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6">
+                        <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 aspect-video relative">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.892348574921!2d-54.869812!3d-29.191283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95039328f6e80b43%3A0x6a2c3a5e8c1f9b0!2sAv.%20Get%C3%BAlio%20Vargas%2C%201894%20-%20Centro%2C%20Santiago%20-%20RS%2C%2097700-365!5e0!3m2!1spt-BR!2sBR!4v1700000000000!5m2!1spt-BR!2sBR" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 text-slate-400 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <div class="space-y-3">
+                    <img src="codigo1.jpg" alt="Código B" class="h-10 w-auto object-contain rounded-lg border border-brand-yellow/30" onerror="this.onerror=null; this.src='https://placehold.co/150x50/111827/FFDD00?text=CODIGO+B'">
+                    <p class="text-xs text-slate-400">
+                        Comércio de Calçados, Confecções, Artigos Esportivos e Acessórios das melhores marcas em Santiago - RS.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-extrabold text-sm mb-3">Navegação</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-brand-yellow transition">Início</a></li>
+                        <li><a href="#apresentacao" class="hover:text-brand-yellow transition">5 Motivos Para Comprar</a></li>
+                        <li><a href="#ecommerce" class="hover:text-brand-yellow transition">Loja Virtual</a></li>
+                        <li><a href="#reels" class="hover:text-brand-yellow transition">Vídeos curtos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-extrabold text-sm mb-3">Formas de Pagamento</h5>
+                    <div class="flex flex-wrap gap-2 text-slate-300">
+                        <span class="bg-slate-900 border border-slate-800 px-2.5 py-1 rounded text-[10px] font-bold">PIX (Com Desconto)</span>
+                        <span class="bg-slate-900 border border-slate-800 px-2.5 py-1 rounded text-[10px] font-bold">Cartão até 10x</span>
+                        <span class="bg-slate-900 border border-slate-800 px-2.5 py-1 rounded text-[10px] font-bold">Crediário Próprio</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-extrabold text-sm mb-3">Redes Sociais</h5>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.instagram.com/lojacodigob/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-brand-yellow hover:text-slate-950 flex items-center justify-center text-white transition text-base">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/lojacodigob/?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-brand-yellow hover:text-slate-950 flex items-center justify-center text-white transition text-base">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/555532518371" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-slate-900 hover:bg-emerald-500 hover:text-slate-950 flex items-center justify-center text-white transition text-base">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500">
+                <p>© 2026 CÓDIGO B - Calçados e Artigos Esportivos. Todos os direitos reservados.</p>
+                <p>Santiago, Rio Grande do Sul - Brasil</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHOPPING CART DRAWER -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl transform translate-x-full transition duration-300 z-50 flex flex-col">
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+            <h3 class="font-extrabold text-white text-base flex items-center gap-2">
+                <i class="fa-solid fa-cart-shopping text-brand-yellow"></i> Seu Carrinho de Compras
+            </h3>
+            <button onclick="closeCart()" class="text-slate-400 hover:text-white p-1 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart-items" class="p-4 flex-1 overflow-y-auto space-y-3">
+            <!-- Cart items dynamically rendered -->
+        </div>
+
+        <div class="p-4 border-t border-slate-800 bg-slate-950 space-y-3">
+            <!-- GIFT PACKAGING OPTION -->
+            <div class="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center gap-3">
+                <input type="checkbox" id="gift-wrap-check" class="w-4 h-4 accent-amber-400 rounded">
+                <label for="gift-wrap-check" class="text-xs text-slate-300 font-bold flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-gift text-red-500"></i> Incluir Embalagem de Presente de Natal + Cartão Cortesia
+                </label>
+            </div>
+
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-400 font-bold">Total:</span>
+                <span id="cart-total" class="font-black text-brand-yellow text-xl">R$ 0,00</span>
+            </div>
+            <button onclick="openCheckout()" class="w-full bg-gradient-yellow hover:opacity-90 text-slate-950 font-black text-sm py-3.5 rounded-2xl transition shadow-lg shadow-amber-500/10 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-lock"></i> Finalizar Compra de Natal
+            </button>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div id="checkout-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 space-y-5 relative">
+            <button onclick="closeCheckout()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <h3 class="font-display font-black text-xl text-white flex items-center gap-2">
+                <i class="fa-solid fa-credit-card text-brand-yellow"></i> Checkout Seguro
+            </h3>
+
+            <!-- PAYMENT OPTIONS TAB -->
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="selectPaymentMethod('pix')" class="payment-tab border border-brand-yellow bg-brand-yellow/10 text-white font-extrabold p-3 rounded-2xl text-xs flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-qrcode text-brand-yellow"></i> Pagar no PIX
+                </button>
+                <button onclick="selectPaymentMethod('card')" class="payment-tab border border-slate-800 text-slate-300 font-bold p-3 rounded-2xl text-xs flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-credit-card"></i> Cartão de Crédito
+                </button>
+            </div>
+
+            <!-- PIX INFO -->
+            <div id="pix-payment-info" class="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-center space-y-3">
+                <p class="text-xs text-slate-300">Escaneie o QR Code ou copie a chave abaixo para pagar no seu app bancário:</p>
+                <div class="w-32 h-32 mx-auto bg-white p-2 rounded-xl flex items-center justify-center">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=00020126360014BR.GOV.BCB.PIX011400000000000000520400005303986540510.005802BR5920LOJA+CODIGO+B+SANTIAGO" alt="Pix QR Code" class="w-full h-full">
+                </div>
+                <div class="flex items-center gap-2">
+                    <input type="text" readonly value="00020126360014BR.GOV.BCB.PIX01140000000000000052040000" class="bg-slate-900 border border-slate-800 text-xs text-slate-400 p-2 rounded-xl flex-1 text-ellipsis">
+                    <button onclick="alert('Chave PIX copiada para a área de transferência!')" class="bg-brand-yellow text-slate-950 font-black text-xs px-3 py-2 rounded-xl">Copiar</button>
+                </div>
+            </div>
+
+            <!-- CARD FORM INFO -->
+            <div id="card-payment-info" class="hidden space-y-3 text-xs">
+                <div>
+                    <label class="text-slate-400 font-bold block mb-1">Número do Cartão</label>
+                    <input type="text" placeholder="0000 0000 0000 0000" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-slate-400 font-bold block mb-1">Validade</label>
+                        <input type="text" placeholder="MM/AA" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white">
+                    </div>
+                    <div>
+                        <label class="text-slate-400 font-bold block mb-1">CVV</label>
+                        <input type="text" placeholder="123" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white">
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="processPayment()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm py-3.5 rounded-2xl transition shadow-lg shadow-emerald-500/20">
+                Confirmar e Finalizar Pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- ERP MANAGEMENT PANEL MODAL -->
+    <div id="erp-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-4xl w-full p-6 space-y-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="toggleERPModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <h3 class="font-display font-black text-xl text-white flex items-center gap-2">
+                    <i class="fa-solid fa-boxes-stacked text-brand-yellow"></i> Painel ERP da Loja - Código B
+                </h3>
+                <span class="text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold px-3 py-1 rounded-full">
+                    Sincronizado via API
+                </span>
+            </div>
+
+            <!-- METRICS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                    <span class="text-xs text-slate-400 font-bold block">Faturamento em Vendas</span>
+                    <span id="erp-revenue" class="text-2xl font-black text-brand-yellow">R$ 0,00</span>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                    <span class="text-xs text-slate-400 font-bold block">Total de Pedidos Processados</span>
+                    <span id="erp-orders-count" class="text-2xl font-black text-white">0</span>
+                </div>
+            </div>
+
+            <!-- STOCK TABLE -->
+            <div class="space-y-2">
+                <h4 class="font-extrabold text-white text-sm">Estoque Atual em Tempo Real</h4>
+                <div class="overflow-x-auto border border-slate-800 rounded-2xl">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-950 text-slate-400 text-xs uppercase border-b border-slate-800">
+                                <th class="p-2">ID</th>
+                                <th class="p-2">Produto</th>
+                                <th class="p-2">Marca</th>
+                                <th class="p-2">Preço</th>
+                                <th class="p-2">Estoque</th>
+                                <th class="p-2">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="erp-stock-table">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- RECENT ORDERS -->
+            <div class="space-y-2">
+                <h4 class="font-extrabold text-white text-sm">Pedidos Recentes</h4>
+                <div class="overflow-x-auto border border-slate-800 rounded-2xl">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-950 text-slate-400 text-xs uppercase border-b border-slate-800">
+                                <th class="p-2">Pedido</th>
+                                <th class="p-2">Horário</th>
+                                <th class="p-2">Total</th>
+                                <th class="p-2">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="erp-recent-orders">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/555532518371?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20C%C3%B3digo%20B!" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-emerald-500 text-slate-950 p-4 rounded-full shadow-2xl hover:scale-110 transition z-40 flex items-center justify-center text-2xl font-black">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- APPLICATION LOGIC & STATE MANAGEMENT -->
+    <script>
+        // BANCO DE DADOS DE PRODUTOS CÓDIGO B
+        let storeProducts = [
+            {
+                id: 101,
+                name: "Camisa Umbro Oficial Grêmio Cel/Bc/Pt",
+                brand: "Umbro",
+                category: "Confecção",
+                price: 329.90,
+                oldPrice: 359.90,
+                stock: 14,
+                isFeatured: true,
+                image: "gremio.jpg"
+            },
+            {
+                id: 102,
+                name: "Camisa Adidas Inter Oficial Verm/Bco",
+                brand: "Adidas",
+                category: "Confecção",
+                price: 259.90,
+                oldPrice: 289.90,
+                stock: 18,
+                isFeatured: true,
+                image: "inter.jpg"
+            },
+            {
+                id: 103,
+                name: "Tênis ADIZERO EVO SL Adidas Corrida",
+                brand: "Adidas",
+                category: "Tênis",
+                price: 899.90,
+                oldPrice: 999.90,
+                stock: 6,
+                isFeatured: true,
+                image: "codigo3.jpg"
+            },
+            {
+                id: 104,
+                name: "Sandália Bottero Salto Bloco Couro Premium",
+                brand: "Bottero",
+                category: "Calçados",
+                price: 249.90,
+                oldPrice: 279.90,
+                stock: 12,
+                isFeatured: true,
+                image: "codigo10.jpg"
+            },
+            {
+                id: 105,
+                name: "Conjunto Run More Mosaico Magenta Fitness",
+                brand: "Run More",
+                category: "Fitness",
+                price: 189.90,
+                oldPrice: 219.90,
+                stock: 15,
+                isFeatured: true,
+                image: "codigo2.jpg"
+            },
+            {
+                id: 106,
+                name: "Chuteira Nike Tiempo Legend Pro Futsal",
+                brand: "Nike",
+                category: "Chuteiras",
+                price: 499.90,
+                oldPrice: 549.90,
+                stock: 8,
+                isFeatured: true,
+                image: "codigo7.jpg"
+            },
+            {
+                id: 107,
+                name: "Clogs Boaonda Conforto Família",
+                brand: "Boaonda",
+                category: "Calçados",
+                price: 129.90,
+                oldPrice: 149.90,
+                stock: 25,
+                isFeatured: false,
+                image: "codigo9.jpg"
+            },
+            {
+                id: 108,
+                name: "Sapatilha Bottero Couro Trançado Marrom",
+                brand: "Bottero",
+                category: "Calçados",
+                price: 219.90,
+                oldPrice: 239.90,
+                stock: 10,
+                isFeatured: false,
+                image: "codigo8.jpg"
+            }
+        ];
+
+        // CARRINHO DE COMPRAS E ESTADO DO ERP
+        let cart = [];
+        let erpOrders = [];
+        let erpRevenue = 0;
+
+        // ESTADOS DE FILTRO
+        let selectedCategory = 'all';
+        let searchQuery = '';
+
+        // PLAY/PAUSE VIDEO WITH UNMUTE
+        function togglePlayVideoWithSound(vidId) {
+            const video = document.getElementById(vidId);
+            if (!video) return;
+
+            // Pause all other videos so audio doesn't overlap
+            document.querySelectorAll('video').forEach(v => {
+                if (v.id !== vidId) {
+                    v.pause();
+                }
+            });
+
+            video.muted = false;
+            if (video.paused) {
+                video.play().catch(e => console.log('Autoplay constraint:', e));
+            } else {
+                video.pause();
+            }
+        }
+
+        function toggleMuteVideo(vidId, btnEl) {
+            const video = document.getElementById(vidId);
+            if (!video) return;
+            video.muted = !video.muted;
+            if (btnEl) {
+                btnEl.innerHTML = video.muted 
+                    ? '<i class="fa-solid fa-volume-xmark"></i>' 
+                    : '<i class="fa-solid fa-volume-high text-brand-yellow"></i>';
+            }
+        }
+
+        // CAROUSEL LOGIC
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let slideInterval;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.carousel-dot');
+            if (!slides.length) return;
+
+            currentSlide = (index + totalSlides) % totalSlides;
+            slides.forEach((slide, i) => {
+                if (i === currentSlide) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('block');
+                } else {
+                    slide.classList.remove('block');
+                    slide.classList.add('hidden');
+                }
+            });
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.add('bg-brand-yellow', 'w-8');
+                    dot.classList.remove('bg-white/50', 'w-3');
+                } else {
+                    dot.classList.remove('bg-brand-yellow', 'w-8');
+                    dot.classList.add('bg-white/50', 'w-3');
+                }
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(i) {
+            showSlide(i);
+        }
+
+        function startCarousel() {
+            if (slideInterval) clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // RENDER PRODUCTS
+        function filterCategory(cat, btn) {
+            selectedCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => {
+                b.classList.remove('bg-brand-yellow', 'text-slate-950', 'font-black');
+                b.classList.add('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700');
+            });
+            if (btn) {
+                btn.classList.remove('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700');
+                btn.classList.add('bg-brand-yellow', 'text-slate-950', 'font-black');
+            }
+            renderProducts();
+        }
+
+        function handleSearch(query) {
+            searchQuery = query.toLowerCase();
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const container = document.getElementById('products-grid');
+            if (!container) return;
+
+            const filtered = storeProducts.filter(p => {
+                const matchCat = selectedCategory === 'all' || p.category.toLowerCase().includes(selectedCategory.toLowerCase());
+                const matchSearch = p.name.toLowerCase().includes(searchQuery) || p.brand.toLowerCase().includes(searchQuery);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass text-4xl mb-3 text-slate-600"></i>
+                        <p class="font-bold text-lg">Nenhum produto encontrado</p>
+                        <p class="text-xs text-slate-500">Tente buscar por outro termo ou mude os filtros.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filtered.map(p => `
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 flex flex-col justify-between group hover:border-brand-yellow/50 transition duration-300 relative overflow-hidden">
+                    <div class="relative rounded-2xl overflow-hidden aspect-square bg-slate-950 mb-4">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='codigo10.jpg'">
+                        <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md border border-slate-800 text-brand-yellow text-[10px] font-black px-2.5 py-1 rounded-full uppercase">
+                            ${p.brand}
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-red-600/90 text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase flex items-center gap-1 shadow-md">
+                            <i class="fa-solid fa-gift text-amber-300"></i> Kit Natal
+                        </span>
+                        ${p.stock < 5 ? `<span class="absolute top-3 right-3 bg-red-500/90 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Poucas Unidades</span>` : ''}
+                    </div>
+                    <div class="space-y-2 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">${p.category}</span>
+                            <h4 class="font-extrabold text-white text-sm line-clamp-2 mt-0.5">${p.name}</h4>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <div>
+                                ${p.oldPrice ? `<span class="text-[11px] text-slate-500 line-through block">R$ ${p.oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}
+                                <span class="text-base font-black text-brand-yellow">R$ ${p.price.toFixed(2).replace('.', ',')}</span>
+                            </div>
+                            <button onclick="addToCart(${p.id})" class="bg-brand-yellow hover:bg-amber-400 text-slate-950 font-black text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-lg shadow-amber-500/10">
+                                <i class="fa-solid fa-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // CART LOGIC
+        function addToCart(productId) {
+            const product = storeProducts.find(p => p.id === productId);
+            if (!product) return;
+            if (product.stock <= 0) {
+                alert('Produto esgotado no estoque do ERP!');
+                return;
+            }
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                if (existing.quantity < product.stock) {
+                    existing.quantity++;
+                } else {
+                    alert('Quantidade máxima em estoque atingida!');
+                    return;
+                }
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+            openCart();
+        }
+
+        function updateCartQuantity(index, delta) {
+            if (!cart[index]) return;
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const itemsEl = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+            const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+            if (countEl) countEl.innerText = totalItems;
+            if (totalEl) totalEl.innerText = `R$ ${totalPrice.toFixed(2).replace('.', ',')}`;
+
+            if (itemsEl) {
+                if (cart.length === 0) {
+                    itemsEl.innerHTML = `
+                        <div class="text-center py-12 text-slate-500">
+                            <i class="fa-solid fa-bag-shopping text-4xl mb-3"></i>
+                            <p class="font-bold">Seu carrinho está vazio</p>
+                            <p class="text-xs mt-1">Escolha seus produtos e adicione aqui!</p>
+                        </div>
+                    `;
+                } else {
+                    itemsEl.innerHTML = cart.map((item, index) => `
+                        <div class="bg-slate-900 border border-slate-800 p-3 rounded-2xl flex items-center gap-3">
+                            <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-xl object-cover bg-slate-950">
+                            <div class="flex-1 min-w-0">
+                                <h5 class="font-extrabold text-white text-xs truncate">${item.name}</h5>
+                                <span class="text-brand-yellow font-black text-xs block">R$ ${item.price.toFixed(2).replace('.', ',')}</span>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <button onclick="updateCartQuantity(${index}, -1)" class="w-5 h-5 rounded-md bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center hover:bg-slate-700">-</button>
+                                    <span class="text-xs font-bold text-white">${item.quantity}</span>
+                                    <button onclick="updateCartQuantity(${index}, 1)" class="w-5 h-5 rounded-md bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center hover:bg-slate-700">+</button>
+                                </div>
+                            </div>
+                            <button onclick="removeFromCart(${index})" class="text-slate-500 hover:text-red-400 p-1">
+                                <i class="fa-solid fa-trash-can text-sm"></i>
+                            </button>
+                        </div>
+                    `).join('');
+                }
+            }
+        }
+
+        function openCart() {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer) drawer.classList.remove('translate-x-full');
+        }
+
+        function closeCart() {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer) drawer.classList.add('translate-x-full');
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer) drawer.classList.toggle('translate-x-full');
+        }
+
+        // CHECKOUT LOGIC
+        function openCheckout() {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
+            }
+            closeCart();
+            const modal = document.getElementById('checkout-modal');
+            if (modal) modal.classList.remove('hidden');
+            if (modal) modal.classList.add('flex');
+        }
+
+        function closeCheckout() {
+            const modal = document.getElementById('checkout-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function selectPaymentMethod(method) {
+            const pixBox = document.getElementById('pix-payment-info');
+            const cardBox = document.getElementById('card-payment-info');
+
+            if (method === 'pix') {
+                if (pixBox) pixBox.classList.remove('hidden');
+                if (cardBox) cardBox.classList.add('hidden');
+            } else {
+                if (pixBox) pixBox.classList.add('hidden');
+                if (cardBox) cardBox.classList.remove('hidden');
+            }
+        }
+
+        function processPayment() {
+            const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            
+            // Deduct stock from ERP
+            cart.forEach(item => {
+                const prod = storeProducts.find(p => p.id === item.id);
+                if (prod) prod.stock = Math.max(0, prod.stock - item.quantity);
+            });
+
+            // Add order to ERP
+            erpOrders.push({
+                id: 'PED-' + Math.floor(1000 + Math.random() * 9000),
+                date: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }),
+                items: cart.length,
+                total: total,
+                status: 'Aprovado (Pix/Cartão)'
+            });
+            erpRevenue += total;
+
+            alert('🎉 Pedido confirmado com sucesso! O estoque já foi atualizado no sistema ERP da loja Código B.');
+            cart = [];
+            updateCartUI();
+            closeCheckout();
+            renderProducts();
+            renderERP();
+        }
+
+        // ERP PANEL MODAL
+        function toggleERPModal() {
+            const modal = document.getElementById('erp-modal');
+            if (modal) {
+                if (modal.classList.contains('hidden')) {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    renderERP();
+                } else {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            }
+        }
+
+        function renderERP() {
+            const revEl = document.getElementById('erp-revenue');
+            const ordersCountEl = document.getElementById('erp-orders-count');
+            const tableBody = document.getElementById('erp-stock-table');
+            const ordersBody = document.getElementById('erp-recent-orders');
+
+            if (revEl) revEl.innerText = `R$ ${erpRevenue.toFixed(2).replace('.', ',')}`;
+            if (ordersCountEl) ordersCountEl.innerText = erpOrders.length;
+
+            if (tableBody) {
+                tableBody.innerHTML = storeProducts.map(p => `
+                    <tr class="border-b border-slate-800 text-xs">
+                        <td class="p-2 font-bold text-white">${p.id}</td>
+                        <td class="p-2 text-slate-300">${p.name}</td>
+                        <td class="p-2 text-slate-400">${p.brand}</td>
+                        <td class="p-2 text-brand-yellow font-bold">R$ ${p.price.toFixed(2)}</td>
+                        <td class="p-2">
+                            <span class="px-2 py-0.5 rounded-full font-bold ${p.stock > 5 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'}">
+                                ${p.stock} un.
+                            </span>
+                        </td>
+                        <td class="p-2 flex items-center gap-1">
+                            <button onclick="adjustERPStock(${p.id}, 1)" class="bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded-md text-[10px] font-bold">+1</button>
+                            <button onclick="adjustERPStock(${p.id}, -1)" class="bg-slate-800 hover:bg-slate-700 text-white px-2 py-1 rounded-md text-[10px] font-bold">-1</button>
+                        </td>
+                    </tr>
+                `).join('');
+            }
+
+            if (ordersBody) {
+                if (erpOrders.length === 0) {
+                    ordersBody.innerHTML = `<tr><td colspan="4" class="p-4 text-center text-slate-500 text-xs">Nenhum pedido processado ainda.</td></tr>`;
+                } else {
+                    ordersBody.innerHTML = erpOrders.map(o => `
+                        <tr class="border-b border-slate-800 text-xs text-slate-300">
+                            <td class="p-2 font-bold text-white">${o.id}</td>
+                            <td class="p-2">${o.date}</td>
+                            <td class="p-2 font-bold text-brand-yellow">R$ ${o.total.toFixed(2)}</td>
+                            <td class="p-2 text-emerald-400 font-bold">${o.status}</td>
+                        </tr>
+                    `).join('');
+                }
+            }
+        }
+
+        function adjustERPStock(id, delta) {
+            const p = storeProducts.find(item => item.id === id);
+            if (p) {
+                p.stock = Math.max(0, p.stock + delta);
+                renderERP();
+                renderProducts();
+            }
+        }
+
+        // INITIALIZATION
+        window.addEventListener('DOMContentLoaded', () => {
+            // Generate snowflakes
+            const snowContainer = document.getElementById('snow-container');
+            if (snowContainer) {
+                const flakeChars = ['❄', '❅', '❆', '✨'];
+                for (let i = 0; i < 30; i++) {
+                    const flake = document.createElement('div');
+                    flake.className = 'snowflake';
+                    flake.innerText = flakeChars[Math.floor(Math.random() * flakeChars.length)];
+                    flake.style.left = Math.random() * 100 + 'vw';
+                    flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                    flake.style.animationDelay = (Math.random() * 5) + 's';
+                    flake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                    snowContainer.appendChild(flake);
+                }
+            }
+
+            renderProducts();
+            startCarousel();
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>

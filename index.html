@@ -387,20 +387,25 @@
                     </div>
 
                     <!-- COUNTDOWN TIMER -->
-                    <div class="flex items-center gap-3 shrink-0 z-10">
-                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
-                            <span id="timer-days" class="font-black text-xl text-brand-yellow block">14</span>
+                    <div class="flex items-center gap-2 sm:gap-3 shrink-0 z-10">
+                        <div class="bg-slate-900/90 border border-slate-800 p-2.5 sm:p-3 rounded-2xl text-center w-14 sm:w-16 shadow-lg">
+                            <span id="timer-days" class="font-black text-lg sm:text-xl text-brand-yellow block">00</span>
                             <span class="text-[9px] text-slate-400 uppercase font-bold">Dias</span>
                         </div>
-                        <span class="text-white font-black text-lg">:</span>
-                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
-                            <span id="timer-hours" class="font-black text-xl text-brand-yellow block">08</span>
+                        <span class="text-white font-black text-base sm:text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-2.5 sm:p-3 rounded-2xl text-center w-14 sm:w-16 shadow-lg">
+                            <span id="timer-hours" class="font-black text-lg sm:text-xl text-brand-yellow block">00</span>
                             <span class="text-[9px] text-slate-400 uppercase font-bold">Horas</span>
                         </div>
-                        <span class="text-white font-black text-lg">:</span>
-                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
-                            <span id="timer-mins" class="font-black text-xl text-brand-yellow block">42</span>
+                        <span class="text-white font-black text-base sm:text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-2.5 sm:p-3 rounded-2xl text-center w-14 sm:w-16 shadow-lg">
+                            <span id="timer-mins" class="font-black text-lg sm:text-xl text-brand-yellow block">00</span>
                             <span class="text-[9px] text-slate-400 uppercase font-bold">Min</span>
+                        </div>
+                        <span class="text-white font-black text-base sm:text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-2.5 sm:p-3 rounded-2xl text-center w-14 sm:w-16 shadow-lg">
+                            <span id="timer-secs" class="font-black text-lg sm:text-xl text-brand-yellow block">00</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Seg</span>
                         </div>
                     </div>
                 </div>
@@ -1123,6 +1128,48 @@
             slideInterval = setInterval(nextSlide, 5000);
         }
 
+        // DYNAMIC CHRISTMAS COUNTDOWN TIMER
+        function startCountdown() {
+            const now = new Date();
+            let targetYear = now.getFullYear();
+            let targetDate = new Date(`December 25, ${targetYear} 00:00:00`);
+
+            if (now > targetDate) {
+                targetDate = new Date(`December 25, ${targetYear + 1} 00:00:00`);
+            }
+
+            function updateTimer() {
+                const currentTime = new Date().getTime();
+                const difference = targetDate.getTime() - currentTime;
+
+                const daysEl = document.getElementById('timer-days');
+                const hoursEl = document.getElementById('timer-hours');
+                const minsEl = document.getElementById('timer-mins');
+                const secsEl = document.getElementById('timer-secs');
+
+                if (difference <= 0) {
+                    if (daysEl) daysEl.innerText = '00';
+                    if (hoursEl) hoursEl.innerText = '00';
+                    if (minsEl) minsEl.innerText = '00';
+                    if (secsEl) secsEl.innerText = '00';
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+                if (minsEl) minsEl.innerText = String(minutes).padStart(2, '0');
+                if (secsEl) secsEl.innerText = String(seconds).padStart(2, '0');
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
         // RENDER PRODUCTS
         function filterCategory(cat, btn) {
             selectedCategory = cat;
@@ -1439,6 +1486,7 @@
 
             renderProducts();
             startCarousel();
+            startCountdown();
             updateCartUI();
         });
     </script>
