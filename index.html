@@ -51,24 +51,57 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        /* CHRISTMAS THEME ANIMATIONS & ACCENTS */
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 30;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(105vh) rotate(360deg); opacity: 0.2; }
+        }
+        .bg-gradient-christmas {
+            background: linear-gradient(135deg, #D97706 0%, #DC2626 50%, #B91C1C 100%);
+        }
+        .glow-gold {
+            box-shadow: 0 0 25px rgba(255, 221, 0, 0.35);
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-yellow selection:text-slate-950">
 
-    <!-- ANNOUNCEMENT BAR TOP -->
-    <div class="bg-gradient-yellow text-slate-950 text-[11px] sm:text-xs font-black py-2 px-4 shadow-md sticky top-0 z-50">
+    <!-- SNOWFLAKE CONTAINER FOR HOLIDAY VIBE -->
+    <div class="snow-container" id="snow-container"></div>
+
+    <!-- ANNOUNCEMENT BAR TOP - HOLIDAY EDITION -->
+    <div class="bg-gradient-to-r from-red-600 via-amber-500 to-red-600 text-white text-[11px] sm:text-xs font-black py-2 px-4 shadow-xl sticky top-0 z-50 border-b border-yellow-300/30">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-3 overflow-x-auto whitespace-nowrap hide-scrollbar">
-                <span class="inline-flex items-center gap-1.5 font-black uppercase tracking-wider">
-                    <i class="fa-solid fa-location-dot"></i> Av. Getúlio Vargas, 1894 - Centro, Santiago/RS
+                <span class="inline-flex items-center gap-1.5 font-black uppercase tracking-wider bg-black/20 px-2.5 py-0.5 rounded-full border border-white/20">
+                    <i class="fa-solid fa-gift text-yellow-300 animate-bounce"></i> NATAL CÓDIGO B 2026
+                </span>
+                <span class="hidden md:inline">•</span>
+                <span class="inline-flex items-center gap-1.5 font-bold">
+                    <i class="fa-solid fa-box-open text-yellow-300"></i> Embalagem de Presente Cortesia + Cartão
                 </span>
                 <span class="hidden md:inline">•</span>
                 <span class="hidden md:inline-flex items-center gap-1.5 font-bold">
-                    <i class="fa-solid fa-phone"></i> (55) 3251-8371
-                </span>
-                <span class="hidden md:inline">•</span>
-                <span class="hidden md:inline-flex items-center gap-1 text-[10px] bg-slate-950/10 px-2 py-0.5 rounded-full uppercase">
-                    <i class="fa-solid fa-credit-card"></i> Crediário Próprio em até 5x sem juros
+                    <i class="fa-solid fa-truck-fast text-yellow-300"></i> Entrega Rápida em Santiago e Região
                 </span>
             </div>
             <div class="flex items-center gap-4 shrink-0">
@@ -164,17 +197,21 @@
                             Esporte no Sangue. <br>
                             <span class="text-gradient-yellow">Estilo no Dia a Dia.</span>
                         </h1>
+                        <!-- HOLIDAY BADGE -->
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-950/80 border border-red-500/40 text-red-400 text-xs font-black uppercase tracking-wider">
+                            <i class="fa-solid fa-holly-berry text-red-500"></i> Coleção de Natal & Fim de Ano 🎄
+                        </div>
                         <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            A <strong class="text-white">Código B</strong> traz as melhores marcas globais para Santiago e todo o Brasil. Calçados confortáveis, alta performance esportiva e confecções de alto padrão com compra online rápida e segura.
+                            A <strong class="text-white">Código B</strong> preparou seleções inesquecíveis para o seu Natal! Encontre o presente perfeito com cartões personalizados e embalagem especial cortesia.
                         </p>
 
                         <!-- HERO ACTIONS -->
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                            <a href="#ecommerce" class="bg-gradient-yellow hover:opacity-90 text-slate-950 font-black text-sm px-6 py-3.5 rounded-full transition transform hover:-translate-y-0.5 shadow-xl shadow-amber-500/10 flex items-center gap-2">
-                                <i class="fa-solid fa-bag-shopping"></i> Comprar Agora no Site
+                            <a href="#ecommerce" class="bg-gradient-to-r from-red-600 via-amber-500 to-brand-yellow hover:opacity-95 text-slate-950 font-black text-sm px-7 py-3.5 rounded-full transition transform hover:-translate-y-0.5 shadow-2xl shadow-red-500/20 flex items-center gap-2 border border-yellow-300/40">
+                                <i class="fa-solid fa-gift text-base"></i> Ver Presentes de Natal
                             </a>
-                            <a href="https://wa.me/555532518371?text=Ol%C3%A1!%20Gostaria%20de%20ver%20os%20produtos%20da%20C%C3%B3digo%20B!" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm px-6 py-3.5 rounded-full border border-slate-800 transition flex items-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-emerald-400"></i> Falar no WhatsApp
+                            <a href="https://wa.me/555532518371?text=Ol%C3%A1!%20Gostaria%20de%20ajuda%20para%20escolher%20um%20presente%20de%20Natal!" target="_blank" rel="noopener noreferrer" class="bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm px-6 py-3.5 rounded-full border border-slate-800 transition flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i> Sugestões de Natal
                             </a>
                         </div>
 
@@ -335,14 +372,47 @@
         <section id="ecommerce" class="py-16 bg-slate-900 border-b border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
+                <!-- CHRISTMAS COUNTDOWN & BANNER -->
+                <div class="mb-10 bg-gradient-to-r from-red-950 via-slate-950 to-red-950 border-2 border-red-600/40 rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2 text-center md:text-left z-10">
+                        <span class="bg-red-600/20 text-red-400 border border-red-500/30 text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+                            <i class="fa-solid fa-clock text-amber-400"></i> Oferta de Natal por Tempo Limitado
+                        </span>
+                        <h3 class="font-display font-black text-2xl sm:text-3xl text-white">
+                            Garanta os Presentes da Família com <span class="text-brand-yellow">Desconto de Natal</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-300 max-w-xl">
+                            Todas as compras acompanham embalagem especial de Natal cortesia da loja Código B em Santiago!
+                        </p>
+                    </div>
+
+                    <!-- COUNTDOWN TIMER -->
+                    <div class="flex items-center gap-3 shrink-0 z-10">
+                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
+                            <span id="timer-days" class="font-black text-xl text-brand-yellow block">14</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Dias</span>
+                        </div>
+                        <span class="text-white font-black text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
+                            <span id="timer-hours" class="font-black text-xl text-brand-yellow block">08</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Horas</span>
+                        </div>
+                        <span class="text-white font-black text-lg">:</span>
+                        <div class="bg-slate-900/90 border border-slate-800 p-3 rounded-2xl text-center w-16 shadow-lg">
+                            <span id="timer-mins" class="font-black text-xl text-brand-yellow block">42</span>
+                            <span class="text-[9px] text-slate-400 uppercase font-bold">Min</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- STORE HEADER -->
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
                     <div>
                         <span class="text-brand-yellow font-black text-xs uppercase tracking-widest block mb-1">
-                            <i class="fa-solid fa-store"></i> Vitrine Integrada em Tempo Real
+                            <i class="fa-solid fa-gift text-red-500"></i> Vitrine de Natal Código B
                         </span>
                         <h2 class="font-display font-black text-3xl sm:text-4xl text-white">
-                            As Melhores Oportunidades da Semana
+                            Presentes que Encantam no Natal
                         </h2>
                     </div>
 
@@ -350,6 +420,9 @@
                     <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
                         <button onclick="filterCategory('all', this)" class="cat-btn bg-brand-yellow text-slate-950 font-black text-xs px-4 py-2 rounded-full transition whitespace-nowrap">
                             Todos os Produtos
+                        </button>
+                        <button onclick="filterCategory('Natal', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap flex items-center gap-1">
+                            <i class="fa-solid fa-tree text-red-500"></i> Especial Natal
                         </button>
                         <button onclick="filterCategory('Confecção', this)" class="cat-btn bg-slate-800 text-slate-300 font-bold text-xs px-4 py-2 rounded-full hover:bg-slate-700 transition whitespace-nowrap">
                             Confecções
@@ -715,12 +788,20 @@
         </div>
 
         <div class="p-4 border-t border-slate-800 bg-slate-950 space-y-3">
+            <!-- GIFT PACKAGING OPTION -->
+            <div class="bg-slate-900 border border-slate-800 p-3 rounded-xl flex items-center gap-3">
+                <input type="checkbox" id="gift-wrap-check" class="w-4 h-4 accent-amber-400 rounded">
+                <label for="gift-wrap-check" class="text-xs text-slate-300 font-bold flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-gift text-red-500"></i> Incluir Embalagem de Presente de Natal + Cartão Cortesia
+                </label>
+            </div>
+
             <div class="flex items-center justify-between text-sm">
                 <span class="text-slate-400 font-bold">Total:</span>
                 <span id="cart-total" class="font-black text-brand-yellow text-xl">R$ 0,00</span>
             </div>
             <button onclick="openCheckout()" class="w-full bg-gradient-yellow hover:opacity-90 text-slate-950 font-black text-sm py-3.5 rounded-2xl transition shadow-lg shadow-amber-500/10 flex items-center justify-center gap-2">
-                <i class="fa-solid fa-lock"></i> Finalizar Compra
+                <i class="fa-solid fa-lock"></i> Finalizar Compra de Natal
             </button>
         </div>
     </div>
@@ -1075,11 +1156,14 @@
             }
 
             container.innerHTML = filtered.map(p => `
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 flex flex-col justify-between group hover:border-brand-yellow/50 transition duration-300">
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-4 flex flex-col justify-between group hover:border-brand-yellow/50 transition duration-300 relative overflow-hidden">
                     <div class="relative rounded-2xl overflow-hidden aspect-square bg-slate-950 mb-4">
                         <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='codigo10.jpg'">
                         <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md border border-slate-800 text-brand-yellow text-[10px] font-black px-2.5 py-1 rounded-full uppercase">
                             ${p.brand}
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-red-600/90 text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase flex items-center gap-1 shadow-md">
+                            <i class="fa-solid fa-gift text-amber-300"></i> Kit Natal
                         </span>
                         ${p.stock < 5 ? `<span class="absolute top-3 right-3 bg-red-500/90 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Poucas Unidades</span>` : ''}
                     </div>
@@ -1329,6 +1413,22 @@
 
         // INITIALIZATION
         window.addEventListener('DOMContentLoaded', () => {
+            // Generate snowflakes
+            const snowContainer = document.getElementById('snow-container');
+            if (snowContainer) {
+                const flakeChars = ['❄', '❅', '❆', '✨'];
+                for (let i = 0; i < 30; i++) {
+                    const flake = document.createElement('div');
+                    flake.className = 'snowflake';
+                    flake.innerText = flakeChars[Math.floor(Math.random() * flakeChars.length)];
+                    flake.style.left = Math.random() * 100 + 'vw';
+                    flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                    flake.style.animationDelay = (Math.random() * 5) + 's';
+                    flake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                    snowContainer.appendChild(flake);
+                }
+            }
+
             renderProducts();
             startCarousel();
             updateCartUI();
