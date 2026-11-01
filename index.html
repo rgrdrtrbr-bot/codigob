@@ -338,7 +338,7 @@
                         <!-- RIGHT FEATURED VIDEO PLAYER -->
                         <div class="lg:col-span-5">
                             <div class="relative rounded-3xl overflow-hidden border-2 border-brand-yellow/40 shadow-2xl aspect-[9/16] max-w-xs mx-auto bg-slate-950 group">
-                                <video id="main-presentation-video" class="w-full h-full object-cover" loop playsinline preload="metadata">
+                                <video id="main-presentation-video" class="w-full h-full object-cover" poster="codigo1.jpg" loop playsinline preload="auto">
                                     <source src="videoapresentacao_3.mp4" type="video/mp4">
                                     <source src="videoapresentacao_2.mp4" type="video/mp4">
                                     <source src="videoapresentacao.mp4" type="video/mp4">
@@ -469,7 +469,7 @@
                     <!-- REEL 1 -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
                         <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
-                            <video id="reel-1" class="w-full h-full object-cover" loop playsinline preload="metadata">
+                            <video id="reel-1" class="w-full h-full object-cover" poster="codigo9.jpg" loop playsinline preload="auto">
                                 <source src="video1.mp4" type="video/mp4">
                             </video>
                             <button onclick="togglePlayVideoWithSound('reel-1')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
@@ -493,7 +493,7 @@
                     <!-- REEL 2 -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
                         <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
-                            <video id="reel-2" class="w-full h-full object-cover" loop playsinline preload="metadata">
+                            <video id="reel-2" class="w-full h-full object-cover" poster="codigo5.jpg" loop playsinline preload="auto">
                                 <source src="video2.mp4" type="video/mp4">
                             </video>
                             <button onclick="togglePlayVideoWithSound('reel-2')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
@@ -517,7 +517,7 @@
                     <!-- REEL 3 -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
                         <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
-                            <video id="reel-3" class="w-full h-full object-cover" loop playsinline preload="metadata">
+                            <video id="reel-3" class="w-full h-full object-cover" poster="codigo3.jpg" loop playsinline preload="auto">
                                 <source src="video3.mp4" type="video/mp4">
                             </video>
                             <button onclick="togglePlayVideoWithSound('reel-3')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
@@ -541,7 +541,7 @@
                     <!-- REEL 4 -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
                         <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
-                            <video id="reel-4" class="w-full h-full object-cover" loop playsinline preload="metadata">
+                            <video id="reel-4" class="w-full h-full object-cover" poster="codigo8.jpg" loop playsinline preload="auto">
                                 <source src="video4.mp4" type="video/mp4">
                             </video>
                             <button onclick="togglePlayVideoWithSound('reel-4')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
@@ -565,7 +565,7 @@
                     <!-- REEL 5 -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group flex flex-col justify-between">
                         <div class="relative aspect-[9/16] bg-slate-950 overflow-hidden">
-                            <video id="reel-5" class="w-full h-full object-cover" loop playsinline preload="metadata">
+                            <video id="reel-5" class="w-full h-full object-cover" poster="codigo10.jpg" loop playsinline preload="auto">
                                 <source src="video5.mp4" type="video/mp4">
                             </video>
                             <button onclick="togglePlayVideoWithSound('reel-5')" class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition">
@@ -1048,6 +1048,14 @@
         function togglePlayVideoWithSound(vidId) {
             const video = document.getElementById(vidId);
             if (!video) return;
+
+            // Pause all other videos so audio doesn't overlap
+            document.querySelectorAll('video').forEach(v => {
+                if (v.id !== vidId) {
+                    v.pause();
+                }
+            });
+
             video.muted = false;
             if (video.paused) {
                 video.play().catch(e => console.log('Autoplay constraint:', e));
